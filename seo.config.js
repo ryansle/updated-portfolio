@@ -3,7 +3,7 @@ const SEO = {
   description: "Learn why you should consider me for your front-end development roles.",
   openGraph: {
     url: "https://ryanle.dev",
-    title: "Grouve",
+    title: "Ryan Le's Personal Portfolio",
     description: "Learn why you should consider me for your front-end development roles.",
     images: [
       {

@@ -4,15 +4,12 @@ import React from "react";
 import { Heading } from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
 
-// import styles from '../styles/Home.module.css'
-
-const Home = () => {
+const Experience = () => {
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Heading size="2xl">Ryan Le</Heading>
-      <Heading size="lg" mt="10px">Software Engineer. Full-Stack Web Developer.</Heading>
+      <Heading size="2xl">Work Experience</Heading>
     </AppNavigation>
   );
 };
 
-export default Home;
+export default Experience;
