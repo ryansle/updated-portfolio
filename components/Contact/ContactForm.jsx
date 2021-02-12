@@ -21,7 +21,6 @@ import { BiMailSend as Send } from "react-icons/bi";
 // Utilities
 import { validateEmail } from "../../utils/validate-data";
 import emailjs from "emailjs-com";
-import { templateId, userId } from "../../secrets";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -69,6 +68,8 @@ const ContactForm = () => {
         message: message,
       };
 
+      const templateId = "template_kc7wVwGF";
+      const userId = "user_VSAtF1KGalm3o5auz1ofo";
       emailjs.send("gmail", templateId, params, userId);
       setLoadingSend(false);
       toast({
