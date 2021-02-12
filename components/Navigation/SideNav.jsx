@@ -46,6 +46,7 @@ const PageLinks = () => (
         <Image
           borderRadius="full"
           boxSize="200px"
+          boxShadow="md"
           src="/headshot.png"
           alt="Ryan Le"
           mb="5px"
@@ -82,8 +83,9 @@ const PageLinks = () => (
     <Divider />
     <br />
 
-    <Heading size="sm">Other Links</Heading>
-    <br />
+    <Heading size="sm" mb={5}>
+      Other Links
+    </Heading>
     <SideNavLink href="https://github.com/ryansle" icon={GitHub}>
       GitHub
     </SideNavLink>
