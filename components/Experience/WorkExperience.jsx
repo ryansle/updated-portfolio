@@ -23,6 +23,7 @@ const WorkExperience = ({
   role,
   dateRange,
   description,
+  subtitle,
   bullets,
   tech,
   imagePath,
@@ -39,10 +40,13 @@ const WorkExperience = ({
 
       <HStack justify="space-between" align="center">
         <Box width="55%">
-          <Text fontSize="md" mb={5}>
+          <Text fontSize="md" mb={6}>
             {description}
           </Text>
 
+          <Heading size="md" mb={2}>
+            {subtitle}
+          </Heading>
           <List spacing={3} mb={5}>
             {bullets.map((bullet) => (
               <ListItem key={uuid()}>

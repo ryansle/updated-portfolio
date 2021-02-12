@@ -23,7 +23,7 @@ import {
   AiOutlinePaperClip as Resume,
 } from "react-icons/ai";
 import { IoPerson as Person } from "react-icons/io5";
-import { AtSignIcon as Contact } from "@chakra-ui/icons";
+import { AtSignIcon as Contact, EditIcon as Credits } from "@chakra-ui/icons";
 import {
   MdWork as Work,
   MdCode as Code,
@@ -94,6 +94,9 @@ const PageLinks = () => (
     </SideNavLink>
     <SideNavLink href="/resume" icon={Resume}>
       Resume
+    </SideNavLink>
+    <SideNavLink href="/credits" icon={Credits}>
+      Credits
     </SideNavLink>
   </Stack>
 );

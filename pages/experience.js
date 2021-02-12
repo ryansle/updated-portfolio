@@ -23,6 +23,7 @@ const Experience = () => {
               role={experience.role}
               dateRange={experience.dateRange}
               description={experience.description}
+              subtitle={experience.subtitle}
               bullets={experience.bullets}
               tech={experience.tech}
               imagePath={experience.imagePath}
