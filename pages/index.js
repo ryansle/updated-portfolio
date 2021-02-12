@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl">Ryan Le</Heading>
-      <Heading size="lg" mt="10px">Software Engineer. Full-Stack Web Developer.</Heading>
+      <Heading size="lg" mt="10px">Software Engineer. Front-End Web Developer.</Heading>
     </AppNavigation>
   );
 };

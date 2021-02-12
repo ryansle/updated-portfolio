@@ -8,6 +8,9 @@ import {
   Box,
   Flex,
   Divider,
+  VStack,
+  Center,
+  Image,
   Heading,
 } from "@chakra-ui/react";
 import { ComponentLink } from "./NavLink";
@@ -38,6 +41,24 @@ const SideNavLink = ({ href, children, icon }) => (
 
 const PageLinks = () => (
   <Stack spacing={0} marginBottom={8}>
+    <Center>
+      <VStack>
+        <Image
+          borderRadius="full"
+          boxSize="200px"
+          src="/headshot.png"
+          alt="Ryan Le"
+          mb="5px"
+        />
+        <Heading size="sm">Ryan Le</Heading>
+        <Text size="sm">Software Engineer Intern @ Nelnet</Text>
+      </VStack>
+    </Center>
+
+    <br />
+    <Divider />
+    <br />
+
     <SideNavLink href="/" icon={Home}>
       Home
     </SideNavLink>
@@ -56,9 +77,11 @@ const PageLinks = () => (
     <SideNavLink href="/contact" icon={Contact}>
       Contact
     </SideNavLink>
+
     <br />
     <Divider />
     <br />
+
     <Heading size="sm">Other Links</Heading>
     <br />
     <SideNavLink href="https://github.com/ryansle" icon={GitHub}>
