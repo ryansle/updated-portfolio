@@ -1,13 +1,85 @@
 import React from "react";
 
 // Components
-import { Heading } from "@chakra-ui/react";
+import { 
+  Heading, 
+  Text, 
+  HStack, 
+  Box, 
+  Image, 
+  List,
+  Divider,
+  ListItem,
+  ListIcon,
+  Icon,
+} from "@chakra-ui/react";
+import { MdCheckCircle as Check } from "react-icons/md"
+import { FaGraduationCap as Grad } from "react-icons/fa";
 import AppNavigation from "../components/Navigation/AppNavigation";
+import SocialMedia from "../components/SocialMedia";
+
+// Utilities
+import { v4 as uuid } from "uuid";
+
+// Content
+import { socials } from "../content/social-media";
+import { accomplishments } from "../content/accomplishments";
 
 const About = () => {
+
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Heading size="2xl">About Me</Heading>
+      <Heading size="2xl" mb={10}>About Me</Heading>
+      <HStack justify="space-between" align="flex-start" mb={20}>
+        <Box width="50%">
+          <Text fontSize="xl" mb={5}>
+            Hey there, my name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
+          </Text>
+          <Text fontSize="xl" mb={5}>
+            I am an Vietnamese-American front-end developer originally from Sioux Falls, South Dakota, working primarily with
+            JavaScript-based technologies like React.js, Material-UI, and Chakra UI.
+          </Text>
+          <Text fontSize="xl" mb={10}>
+            As such, I specialize in web development and enjoy working on projects of all shapes and sizes, ranging from deep within
+            the initial design process to building out large-scale systems. In time, I am hoping to gain more full-stack experience,
+            leveraging frameworks and tools like Amazon Web Services and the serverless framework.
+          </Text>
+
+          <Heading size="lg" mb={5}>Connect with me on Social Media</Heading>
+          <HStack spacing={6}>
+            {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
+          </HStack>
+        </Box>
+        <Box width="40%">
+          <Image src="./about/idaho.JPG" width={500} borderRadius={10} boxShadow="md" />
+          <Text fontSize="lg" color="gray" mt={5} align="center">Sandpoint, Idaho, March 2020</Text>
+        </Box>
+      </HStack>
+
+      <Divider />
+
+      <HStack justify="space-between" align="center" mt={20} mb={20}>
+        <Box width="30%">
+          <Image src="./about/nebraska.svg" width="80%" />
+        </Box>
+        <Box width="60%">
+          <Heading size="2xl" mb={5}>Education</Heading>
+          <Heading size="lg" mb={2} >University of Nebraska-Lincoln</Heading>
+          <Text fontSize="xl">Bachelor of Science in <b>Software Engineering</b>; Minor in <b>Mathematics</b></Text>
+          <Text fontSize="xl"><b>Cumulative GPA</b>: 3.623/4.000</Text>
+          <Text fontSize="xl" mb={10}><b>Expected Graduation Date</b>: May 8th, 2021 <Icon as={Grad} /></Text>
+          
+          <Heading size="lg" mb={5}>Accomplishments</Heading>
+          <List spacing={3}>
+            {accomplishments.map((bullet) => 
+              <ListItem key={uuid()}>
+                <ListIcon as={Check} color="teal.500" />
+                {bullet}
+              </ListItem>
+            )}
+          </List>
+        </Box>
+      </HStack>
     </AppNavigation>
   );
 };

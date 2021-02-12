@@ -128,6 +128,13 @@ const ContactForm = () => {
           </Button>
           <Button
             colorScheme="teal"
+            isDisabled={
+              name === "" ||
+              email === "" ||
+              subject === "" ||
+              message === "" ||
+              !validEmail
+            }
             rightIcon={<Send />}
             onClick={sendEmail}
             isLoading={loadingSend}
