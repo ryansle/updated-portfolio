@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import {
   Box,
   HStack,
-  Text,
-  Spacer,
   FormControl,
   FormLabel,
   FormHelperText,
@@ -14,7 +12,6 @@ import {
   Button,
   useToast,
 } from "@chakra-ui/react";
-import SocialMedia from "./SocialMedia";
 import { AiOutlineClear as Clear } from "react-icons/ai";
 import { BiMailSend as Send } from "react-icons/bi";
 
@@ -85,77 +82,61 @@ const ContactForm = () => {
   };
 
   return (
-    <Box mt={10}>
-      <HStack justify="space-between" mb={20}>
-        <Box width="46%">
-          <FormControl id="contact" isRequired>
-            <FormLabel>Name</FormLabel>
-            <Input
-              placeholder="Whom am I speaking to?"
-              onChange={updateName}
-              value={name}
-              mb={5}
-            />
-            <FormLabel>Email Address</FormLabel>
-            <Input
-              placeholder="Where should I reply to?"
-              onChange={updateEmail}
-              onBlur={validateEmailOnBlur}
-              isInvalid={!validEmail}
-              errorBorderColor="crimson"
-              value={email}
-              mb={validEmail ? 5 : 0}
-            />
-            {!validEmail && (
-              <FormHelperText mb={5}>Error: Invalid email.</FormHelperText>
-            )}
-            <FormLabel>Subject</FormLabel>
-            <Input
-              placeholder="What's the deal?"
-              onChange={updateSubject}
-              value={subject}
-              mb={5}
-            />
-            <FormLabel>Message</FormLabel>
-            <Textarea
-              placeholder="Talk about it!"
-              size="lg"
-              onChange={updateMessage}
-              value={message}
-              mb={5}
-            />
-          </FormControl>
+    <Box width="46%" mt={10}>
+      <Box>
+        <FormControl id="contact" isRequired>
+          <FormLabel>Name</FormLabel>
+          <Input
+            placeholder="Whom am I speaking to?"
+            onChange={updateName}
+            value={name}
+            mb={5}
+          />
+          <FormLabel>Email Address</FormLabel>
+          <Input
+            placeholder="Where should I reply to?"
+            onChange={updateEmail}
+            onBlur={validateEmailOnBlur}
+            isInvalid={!validEmail}
+            errorBorderColor="crimson"
+            value={email}
+            mb={validEmail ? 5 : 0}
+          />
+          {!validEmail && (
+            <FormHelperText mb={5}>Error: Invalid email.</FormHelperText>
+          )}
+          <FormLabel>Subject</FormLabel>
+          <Input
+            placeholder="What's the deal?"
+            onChange={updateSubject}
+            value={subject}
+            mb={5}
+          />
+          <FormLabel>Message</FormLabel>
+          <Textarea
+            placeholder="Talk about it!"
+            size="lg"
+            onChange={updateMessage}
+            value={message}
+            mb={5}
+          />
+        </FormControl>
 
-          <HStack justify="space-between">
-            <Button colorScheme="teal" onClick={clearForm} leftIcon={<Clear />}>
-              Clear Form
-            </Button>
-            <Button
-              colorScheme="teal"
-              rightIcon={<Send />}
-              onClick={sendEmail}
-              isLoading={loadingSend}
-              loadingText="Sending..."
-            >
-              Send
-            </Button>
-          </HStack>
-        </Box>
-        <Spacer />
-        <Box width="46%">
-          <Text fontSize="xl" mb={5}>
-            Liking what you see on my website? Need a dedicated new team member
-            to collaborate with, or have a million dollar idea to discuss? Shoot
-            me a message and let's get in touch about it!
-          </Text>
-          <Text fontSize="xl" mb={5}>
-            I'm always available for interesting new work, whether you're in the
-            build phases of your current project or just need a hand getting
-            started.
-          </Text>
-        </Box>
-      </HStack>
-      <SocialMedia />
+        <HStack justify="space-between">
+          <Button colorScheme="teal" onClick={clearForm} leftIcon={<Clear />}>
+            Clear Form
+          </Button>
+          <Button
+            colorScheme="teal"
+            rightIcon={<Send />}
+            onClick={sendEmail}
+            isLoading={loadingSend}
+            loadingText="Sending..."
+          >
+            Send
+          </Button>
+        </HStack>
+      </Box>
     </Box>
   );
 };
