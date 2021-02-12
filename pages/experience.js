@@ -8,13 +8,16 @@ import WorkExperience from "../components/Experience/WorkExperience";
 // Content
 import { experienceContent } from "../content/experience";
 
+// Utilities
+import { v4 as uuid } from "uuid";
+
 const Experience = () => {
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl">Work Experience</Heading>
       {
         experienceContent.map((experience, index) => (
-          <>
+          <Box key={uuid()}>
             <WorkExperience
               company={experience.company}
               role={experience.role}
@@ -26,11 +29,11 @@ const Experience = () => {
             />
             
             {index !== experienceContent.length - 1 ? (
-              <Divider height={10}/>
+              <Divider height={10} key={uuid()} />
             ) : (
-              <Box mb="100px"/>
+              <Box mb="100px" key={uuid()} />
             )}
-          </>
+          </Box>
         ))
       }
     </AppNavigation>

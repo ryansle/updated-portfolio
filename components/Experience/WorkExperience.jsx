@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   Image,
-  Flex,
   List,
   ListItem,
   ListIcon,
@@ -15,6 +14,9 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { MdSettings as Gear } from "react-icons/md";
+
+// Utilities
+import { v4 as uuid } from "uuid";
 
 const WorkExperience = ({
   company,
@@ -43,7 +45,7 @@ const WorkExperience = ({
 
           <List spacing={3} mb={5}>
             {bullets.map((bullet) => (
-              <ListItem>
+              <ListItem key={uuid()}>
                 <ListIcon as={Gear} color="teal.500" />
                 {bullet}
               </ListItem>
@@ -54,6 +56,7 @@ const WorkExperience = ({
             <Box width="80%">
               {tech.map((service) => (
                 <Tag
+                  key={uuid()}
                   size="lg"
                   colorScheme="teal"
                   borderRadius="full"
