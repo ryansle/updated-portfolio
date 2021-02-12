@@ -25,7 +25,7 @@ const Experience = () => {
               description={experience.description}
               subtitle={experience.subtitle}
               bullets={experience.bullets}
-              tech={experience.tech}
+              stack={experience.stack}
               imagePath={experience.imagePath}
             />
             

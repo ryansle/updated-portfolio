@@ -6,7 +6,7 @@ export const experienceContent = [
     description: "Currently participating in a fully remote internship in a primary role as a Front-End Developer on Nelnet's Campus Key team.",
     subtitle: "Things I've Done",
     bullets: ["Redevelop the front-end for the Cardholder Portal application using React.js", "Leverage Material-UI for faster and easier web development", "Develop dynamically scalable iOS applications with Swift, UIKit, and the serverless framework", "Design and develop rich, interactive user experiences utilizing the power of UIKit"],
-    tech: ["React.js", "Material-UI", "Amazon Web Services", "Firebase", "Figma", "Swift", "UIKit"],
+    stack: ["React.js", "Material-UI", "Amazon Web Services", "Firebase", "Figma", "Swift", "UIKit"],
     imagePath: "./experience/nelnet.svg",
   },
   {
@@ -16,7 +16,7 @@ export const experienceContent = [
     description: "Inherited the pre-existing Hoffman Analytics senior design project from a team of students at the University of Nebraska-Lincoln and worked to lead the redevelopment of an online commercial real estate feasibility analytics and client report generation system.",
     subtitle: "System Capabilities",
     bullets: ["Quickly organize data by project to upload and download files with ease", "Directly integrate with a variety of Amazon Web Services to store files, authenticate users, and create and store project information", "Search, filter, and compare projects to painlessly track down similar markets", "Easily upload and download files to a variety of projects with bulk capabilities"],
-    tech: ["React.js", "Material-UI", "Amazon Web Services", "Redux", "GraphQL"],
+    stack: ["React.js", "Material-UI", "Amazon Web Services", "Redux", "GraphQL"],
     imagePath: "./experience/hsg.png"
   },
   {
@@ -26,7 +26,7 @@ export const experienceContent = [
     description: "Developed and maintained a report generation tool that streamlined internal processes and consolidated large batches of data into one place.",
     subtitle: "System Capabilities",
     bullets: ["Easily export database information onto a formatted PDF", "Filter through 2,000 database entries quickly and easily based on their defined relationships between one another", "Query a unit's corresponding data at the touch of a button to be displayed in a sensical, easy-to-understand user interface"],
-    tech: ["JavaScript", "Kendo UI", "jQuery", "ASP.NET Core", "MySQL"],
+    stack: ["JavaScript", "Kendo UI", "jQuery", "ASP.NET Core", "MySQL"],
     imagePath: "./experience/raven.png",
   },
   {
@@ -36,7 +36,7 @@ export const experienceContent = [
     description: "Aided Dr. Bohn in the planning and execution of his CSCE 361 (Software Engineering) course while also grading student assignments and holding weekly office hours.",
     subtitle: "Responsibilities",
     bullets: ["Managed three student software teams as they tackled a semester-long development project", "Authored concise tutorials for the use of the JavaFX Scene Builder in conjunction with IntelliJ IDEA", "Drove several changes to the contents of the midterm exam(s) after peer-review"],
-    tech: ["Java", "JavaFX", "GitLab",],
+    stack: ["Java", "JavaFX", "GitLab",],
     imagePath: "./experience/unlcoe.png",
   },
   {
@@ -46,7 +46,7 @@ export const experienceContent = [
     description: "Evaluated beta versions of the hit indie game Terraria for bugs and gameplay issues prior to shipping out major community updates.",
     subtitle: "Fun Facts",
     bullets: ["As of April 2020, Terraria has sold 30 million copies worldwide", "At the time of my recruitment, I was only 12 years old, making me the youngest quality assurance tester on the team by about a mile", "Terraria was never projected to become as large as it did", "My experience with Re-Logic games was what fueled my initial interest in software development"],
-    tech: ["Jira", "Slack", "XChat", "Dropbox",],
+    stack: ["Jira", "Slack", "XChat", "Dropbox",],
     imagePath: "./experience/re-logic.png",
   },
 ];

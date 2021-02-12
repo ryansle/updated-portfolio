@@ -25,7 +25,7 @@ const WorkExperience = ({
   description,
   subtitle,
   bullets,
-  tech,
+  stack,
   imagePath,
 }) => {
   return (
@@ -58,7 +58,7 @@ const WorkExperience = ({
 
           <HStack justify="space-between" alignItems="flex-end">
             <Box width="80%">
-              {tech.map((service) => (
+              {stack.map((tech) => (
                 <Tag
                   key={uuid()}
                   size="lg"
@@ -66,7 +66,7 @@ const WorkExperience = ({
                   borderRadius="full"
                   margin={1}
                 >
-                  {service}
+                  {tech}
                 </Tag>
               ))}
             </Box>

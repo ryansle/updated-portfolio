@@ -4,6 +4,13 @@ import React from "react";
 import { Heading, HStack, Box, Text, } from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
 import ContactForm from "../components/Contact/ContactForm";
+import SocialMedia from "../components/SocialMedia";
+
+// Utilities
+import { v4 as uuid } from "uuid";
+
+// Content
+import { socials } from "../content/social-media";
 
 const Contact = () => {
   return (
@@ -23,6 +30,11 @@ const Contact = () => {
             started.
           </Text>
         </Box>
+      </HStack>
+
+      <Heading size="lg" mb={5}>Connect with me on Social Media</Heading>
+      <HStack spacing={6}>
+        {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
       </HStack>
     </AppNavigation>
   );
