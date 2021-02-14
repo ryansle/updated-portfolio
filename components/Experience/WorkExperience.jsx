@@ -57,7 +57,7 @@ const WorkExperience = ({
           </List>
 
           <HStack justify="space-between" alignItems="flex-end">
-            <Box width="80%">
+            <Box width="100%">
               {stack.map((tech) => (
                 <Tag
                   key={uuid()}
@@ -70,15 +70,11 @@ const WorkExperience = ({
                 </Tag>
               ))}
             </Box>
-            <Box width="20%">
-              <Button colorScheme="teal">Learn More</Button>
-            </Box>
           </HStack>
         </Box>
         <Box width="40%">
           <Image src={imagePath} width="100%" />
         </Box>
-        ``
       </HStack>
     </Box>
   );

@@ -6,18 +6,24 @@ import { Box, Heading, Text, Button, Tag } from "@chakra-ui/react";
 // Utilities
 import { v4 as uuid } from "uuid";
 
-const ProjectPreview = ({ title, description, stack }) => {
+const ProjectPreview = ({ title, company = "", description, stack }) => {
   return (
     <Box
       borderWidth="1px"
       borderRadius="lg"
       padding={5}
-      margin={3}
-      width="400px"
+      mr={5}
+      mb={5}
+      width="31%"
     >
-      <Heading size="md" mb={5}>
+      <Heading size="md" mb={company === "" ? 5 : 2}>
         {title}
       </Heading>
+      {company !== "" && (
+        <Heading size="sm" mb={5}>
+          {company}
+        </Heading>
+      )}
       <Text size="lg" mb={5}>
         {description}
       </Text>

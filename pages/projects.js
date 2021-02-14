@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import { Heading } from "@chakra-ui/react";
+import { Heading, Box, Divider } from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
 import ProjectGroup from "../components/Projects/ProjectGroup";
 
@@ -15,12 +15,16 @@ const Projects = () => {
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl">Projects</Heading>
-      {projects.map((group) => (
-        <ProjectGroup 
-          key={uuid()} 
-          title={group.type} 
-          projects={group.projects} 
-        />
+      {projects.map((group, index) => (
+        <Box>
+          <ProjectGroup 
+            key={uuid()} 
+            title={group.type} 
+            description={group.categoryDescription}
+            projects={group.projects} 
+          />
+          {index !== projects.length - 1 && <Divider my={20}/>}
+        </Box>
       ))}
     </AppNavigation>
   );
