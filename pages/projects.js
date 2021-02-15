@@ -23,7 +23,7 @@ const Projects = () => {
             description={group.categoryDescription}
             projects={group.projects} 
           />
-          {index !== projects.length - 1 && <Divider my={20}/>}
+          {index !== projects.length - 1 && <Divider my={10}/>}
         </Box>
       ))}
     </AppNavigation>

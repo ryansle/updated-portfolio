@@ -49,6 +49,11 @@ export const projects = [
     categoryDescription: "Projects I've worked on throughout my college career for a grade.",
     projects: [
       { 
+        title: "Grouve",
+        description: "Also known as the \"SOFTie Startup\", my peers and I campaigned our university to allow us to pursue our own entrepreneurial experience during our final year of senior design. Grouve is a platform that changes the way that events are planned using music.",
+        stack: ["React.js", "Chakra UI", "Next.js", "Amazon Web Services"],
+      },
+      { 
         title: "Web-based Interactive Data Visualization",
         description: "Our final assignment for my Data Modeling course tasked us with visually representing states' population and GDP data within a webapp using the D3.s library. Using this library, we were able ot create interactive bar charts and scatter plots to better represent the provided dataset.",
         stack: ["React.js", "D3.js", "Google Colab", "Python", "pandas"],
