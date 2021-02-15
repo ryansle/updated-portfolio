@@ -3,7 +3,7 @@ import React from "react";
 // Components
 import {
   Box,
-  Button,
+  Flex,
   Image,
   List,
   ListItem,
@@ -12,6 +12,7 @@ import {
   Text,
   Heading,
   HStack,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { MdSettings as Gear } from "react-icons/md";
 
@@ -28,6 +29,9 @@ const WorkExperience = ({
   stack,
   imagePath,
 }) => {
+  // Responsive hooks
+  const [tabletScreen] = useMediaQuery("(max-width: 1340px)");
+
   return (
     <Box width="full" mt={10}>
       <Heading size="xl">{company}</Heading>
@@ -38,8 +42,8 @@ const WorkExperience = ({
         {dateRange}
       </Text>
 
-      <HStack justify="space-between" align="center">
-        <Box width="55%">
+      <Flex justify="space-between" align="center" flexWrap="wrap-reverse">
+        <Box width={tabletScreen ? "100%" : "55%"}>
           <Text fontSize="md" mb={6}>
             {description}
           </Text>
@@ -72,10 +76,15 @@ const WorkExperience = ({
             </Box>
           </HStack>
         </Box>
-        <Box width="40%">
-          <Image src={imagePath} width="100%" />
+        <Box width={tabletScreen ? "100%" : "40%"} align="center">
+          <Image
+            src={imagePath}
+            width={tabletScreen ? "70%" : "100%"}
+            mt={tabletScreen ? 4 : 0}
+            mb={tabletScreen ? 6 : 0}
+          />
         </Box>
-      </HStack>
+      </Flex>
     </Box>
   );
 };

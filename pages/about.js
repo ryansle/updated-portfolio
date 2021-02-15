@@ -5,6 +5,7 @@ import {
   Heading, 
   Text, 
   HStack, 
+  Flex,
   Box, 
   Image, 
   List,
@@ -12,6 +13,7 @@ import {
   ListItem,
   ListIcon,
   Icon,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { MdCheckCircle as Check } from "react-icons/md"
 import { FaGraduationCap as Grad } from "react-icons/fa";
@@ -26,12 +28,14 @@ import { socials } from "../content/social-media";
 import { accomplishments } from "../content/accomplishments";
 
 const About = () => {
+  // Responsive hooks
+  const [phoneScreen] = useMediaQuery("(max-width: 985px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={10}>About Me</Heading>
-      <HStack justify="space-between" align="flex-start" mb={20}>
-        <Box width="50%">
+      <Flex justify="space-between" align="flex-start" mb={20} flexWrap="wrap-reverse">
+        <Box width={phoneScreen ? "100%" : "50%"}>
           <Text fontSize="xl" mb={5}>
             Hey there, my name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
           </Text>
@@ -50,19 +54,36 @@ const About = () => {
             {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
           </HStack>
         </Box>
-        <Box width="40%">
-          <Image src="./about/idaho.JPG" width={500} borderRadius={10} boxShadow="md" />
-          <Text fontSize="lg" color="gray" mt={5} align="center">Sandpoint, Idaho, March 2020</Text>
+        <Box width={phoneScreen ? "100%" : "40%"} align="center">
+          <Image 
+            src="./about/idaho.JPG" 
+            width={500} 
+            borderRadius={10} 
+            boxShadow="md" 
+          />
+          <Text 
+            fontSize="lg" 
+            color="gray" 
+            mt={5} 
+            align="center"
+            mb={phoneScreen ? 5 : 0}
+          >
+            Sandpoint, Idaho, March 2020
+          </Text>
         </Box>
-      </HStack>
+      </Flex>
 
       <Divider />
 
-      <HStack justify="space-between" align="center" mt={20} mb={20}>
-        <Box width="30%">
-          <Image src="./about/nebraska.svg" width="80%" />
+      <Flex justify="space-between" align="center" mt={20} mb={20} flexWrap="wrap">
+        <Box width={phoneScreen ? "100%" : "30%"} align="center">
+          <Image 
+            src="./about/nebraska.svg" 
+            width={phoneScreen ? "50%" : "80%"} 
+            mb={phoneScreen ? 10 : 0}
+          />
         </Box>
-        <Box width="60%">
+        <Box width={phoneScreen ? "100%" : "60%"}>
           <Heading size="2xl" mb={5}>Education</Heading>
           <Heading size="lg" mb={2} >University of Nebraska-Lincoln</Heading>
           <Text fontSize="xl">Bachelor of Science in <b>Software Engineering</b>; Minor in <b>Mathematics</b></Text>
@@ -79,7 +100,7 @@ const About = () => {
             )}
           </List>
         </Box>
-      </HStack>
+      </Flex>
     </AppNavigation>
   );
 };
