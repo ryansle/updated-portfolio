@@ -24,6 +24,7 @@ const ProjectGroup = ({ title, description, projects }) => {
             company={project.company}
             description={project.description}
             stack={project.stack}
+            pageContents={project.modal}
           />
         ))}
       </Wrap>
