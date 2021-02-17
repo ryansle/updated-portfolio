@@ -1,0 +1,76 @@
+{
+  "updated-portfolio": {
+    "title": "Updated Portfolio",
+    "stack": ["React.js", "Next.js", "Chakra UI", "React Icons", "EmailJS"],
+    "github": "https://github.com/ryansle/updated-portfolio",
+    "link": "https://ryanle.dev/",
+    "section1": "If you ever saw my old portfolio, you might remember how... clunky it felt. So, once I realized how easy Chakra UI was to work with, and how nice it looked, I knew I couldn't try to advertise my skills as a front-end developer by sticking with my original portfolio website that I built while still trying to figure out how to use React.js."
+  },
+  "pokemon-team-builder": {
+    "title": "Pokémon Team Builder",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "legacy-portfolio": {
+    "title": "Legacy Portfolio",
+    "stack": ["React.js", "Create React App", "Material-UI", "React-Router", "CSS", "EmailJS"],
+    "github": "https://github.com/ryansle/legacy-portfolio",
+    "link": "https://legacy.ryansle.dev/",
+    "section1": "The original portfolio I made was the first thing I ever built when I started learning React.js. As such, the code is messy, disorganized, and inconsistent. At best, it's amateur. That being said, from building that original website, I learned a TON."
+  },
+  "cardholder-portal": {
+    "title": "Cardholder Portal",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "hoffman-analytics": {
+    "title": "Hoffman Analytics",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "dtc-report-generator": {
+    "title": "DTC Report Generator",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "grouve": {
+    "title": "Grouve",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "d3-visuals": {
+    "title": "Web-based Interactive Data Visualization",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "social-media-marketing": {
+    "title": "Social Media Marketing",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "vr-space-explorer": {
+    "title": "Virtual Reality Space Explorer",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "traffic-simulator": {
+    "title": "Traffic Simulator",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "care-tracking": {
+    "title": "Care Tracking Application",
+    "stack": [],
+    "github": "",
+    "link": ""
+  }
+}
