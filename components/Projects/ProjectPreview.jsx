@@ -7,6 +7,7 @@ import { Box, Heading, Text, Button, Tag, Link } from "@chakra-ui/react";
 import { v4 as uuid } from "uuid";
 
 const ProjectPreview = ({
+  id,
   title,
   company = "",
   description,
@@ -47,7 +48,7 @@ const ProjectPreview = ({
           </Tag>
         ))}
 
-        <Link href={`/projects/${pageContents.id}`}>
+        <Link href={`/projects/${id}`}>
           <Button width="full" mt={5}>
             Learn More
           </Button>

@@ -3,8 +3,7 @@
     "title": "Updated Portfolio",
     "stack": ["React.js", "Next.js", "Chakra UI", "React Icons", "EmailJS"],
     "github": "https://github.com/ryansle/updated-portfolio",
-    "link": "https://ryanle.dev/",
-    "section1": "If you ever saw my old portfolio, you might remember how... clunky it felt. So, once I realized how easy Chakra UI was to work with, and how nice it looked, I knew I couldn't try to advertise my skills as a front-end developer by sticking with my original portfolio website that I built while still trying to figure out how to use React.js."
+    "link": "https://ryanle.dev/"
   },
   "pokemon-team-builder": {
     "title": "Pokémon Team Builder",
@@ -16,8 +15,7 @@
     "title": "Legacy Portfolio",
     "stack": ["React.js", "Create React App", "Material-UI", "React-Router", "CSS", "EmailJS"],
     "github": "https://github.com/ryansle/legacy-portfolio",
-    "link": "https://legacy.ryansle.dev/",
-    "section1": "The original portfolio I made was the first thing I ever built when I started learning React.js. As such, the code is messy, disorganized, and inconsistent. At best, it's amateur. That being said, from building that original website, I learned a TON."
+    "link": "https://legacy.ryansle.dev/"
   },
   "cardholder-portal": {
     "title": "Cardholder Portal",
