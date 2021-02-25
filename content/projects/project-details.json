@@ -15,59 +15,59 @@
     "title": "Legacy Portfolio",
     "stack": ["React.js", "Create React App", "Material-UI", "React-Router", "CSS", "EmailJS"],
     "github": "https://github.com/ryansle/legacy-portfolio",
-    "link": "https://legacy.ryansle.dev/"
+    "link": "https://legacy.ryanle.dev/"
   },
   "cardholder-portal": {
     "title": "Cardholder Portal",
-    "stack": [],
+    "stack": ["React.js", "Create React App", "Material-UI", "AWS DynamoDB", "Dishout API", "React-Router", "CSS"],
     "github": "",
     "link": ""
   },
   "hoffman-analytics": {
     "title": "Hoffman Analytics",
-    "stack": [],
+    "stack": ["React.js", "Material-UI", "Redux", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "GraphQL", "Create React App", "CSS"],
     "github": "",
     "link": ""
   },
   "dtc-report-generator": {
     "title": "DTC Report Generator",
-    "stack": [],
+    "stack": ["Kendo UI", "jQuery", "CSS", "ASP.NET Core"],
     "github": "",
     "link": ""
   },
   "grouve": {
     "title": "Grouve",
-    "stack": [],
+    "stack": ["React.js", "Chakra UI", "Next.js", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "GraphQL"],
     "github": "",
     "link": ""
   },
   "d3-visuals": {
     "title": "Web-based Interactive Data Visualization",
-    "stack": [],
+    "stack": ["React.js", "Material-UI", "d3.js", "Create React App"],
     "github": "",
     "link": ""
   },
   "social-media-marketing": {
     "title": "Social Media Marketing",
-    "stack": [],
+    "stack": ["Swift", "SwiftUI", "Alamofire", "Kingfisher", "Drupal"],
     "github": "",
     "link": ""
   },
   "vr-space-explorer": {
     "title": "Virtual Reality Space Explorer",
-    "stack": [],
+    "stack": ["C#", "Unity", "SteamVR", "Visual Studio"],
     "github": "",
     "link": ""
   },
   "traffic-simulator": {
     "title": "Traffic Simulator",
-    "stack": [],
+    "stack": ["JavaScrpt", "HTML", "CSS"],
     "github": "",
     "link": ""
   },
   "care-tracking": {
     "title": "Care Tracking Application",
-    "stack": [],
+    "stack": ["Python", "Kivy", "MySQL", "SQLAlchemy"],
     "github": "",
     "link": ""
   }

@@ -10,10 +10,14 @@ import {
   Flex,
   Heading,
   Image,
+  Link,
   Code,
   useMediaQuery
 } from "@chakra-ui/react";
-import { NotAllowedIcon as Bullet } from "@chakra-ui/icons";
+import { 
+  NotAllowedIcon as Bullet, 
+  CheckIcon as Check 
+} from "@chakra-ui/icons";
 
 const ProjectDetailsContent = ({ project }) => {
   const [phoneScreen] = useMediaQuery("(max-width: 985px)");
@@ -61,7 +65,12 @@ const ProjectDetailsContent = ({ project }) => {
           </List>
         </Box>
         <Box width={phoneScreen ? "100%" : "30%"}>
-          <Image src="../projects/legacy.JPG" width="full" borderRadius={10} my={phoneScreen ? 10 : 0} />
+          <Image 
+            src="../projects/legacy.JPG" 
+            width="full" 
+            borderRadius={10} 
+            my={phoneScreen ? 10 : 0} 
+          />
         </Box>
       </Flex>
 
@@ -79,12 +88,92 @@ const ProjectDetailsContent = ({ project }) => {
 
   const legacyPortfolio = (
     <Box>
-      <Text fontSize="xl">
+      <Text fontSize="xl" mb={10}>
         The original portfolio I made was the first thing I ever built when I started 
         learning React.js. As such, the code is messy, disorganized, and inconsistent. 
         At best, it's amateur. That being said, from building that original website, I 
         learned a TON.
       </Text>
+
+      <Heading size="lg" mb={2}>Motivation</Heading>
+      <Text fontSize="xl" mb={10}>
+        After all, that was the whole reason I even built it in the first place: to
+        learn something new while also showcasing my current skillsets to start
+        searching for new work opportunities. Up to this point in my college career, I
+        hadn't really 'focused' on any aspect of software development yet: I had tried
+        my hands at developing VR games, general scripting in Python, and done mobile
+        development in Swift. But none of that had really piqued my interest. On top
+        of that, I had recently lost a planned internship where I was going to learn
+        fundamental web development concepts, and just wanted to spend some time over
+        the summer learning <i>something.</i>
+      </Text>
+
+      <Heading size="lg" mb={2}>How did I get started?</Heading>
+      <Text fontSize="xl" mb={10}>
+        I was lucky enough at the time of getting started to have friends who were more
+        than experienced with React.js. Initially, I received a lot of inspiration and help
+        building out my personal website from my friends{" "} 
+        <Link href="https://msich.dev/" color="teal.500">Matt Sichterman</Link>{" "}
+        and <Link href="https://www.peytontanzillo.com" color="teal.500">Peyton Tanzillo</Link>.
+        Not only were they able to answer my questions when I would get stuck, but they
+        were able to point me to different online resources to aid in my learning of the framework.
+        Probably the resource I used the most in getting started was{" "}
+        <Link href="https://www.freecodecamp.org/" color="teal.500">freecodecamp.org</Link>. They
+        provided me the baseline information I needed to understand how to <i>use</i> React.js,
+        just not how to use it correctly and as intended.
+      </Text>
+
+      <Heading size="lg" mb={2}>What did I learn?</Heading>
+      <List spacing={2} fontSize="xl">
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          What a component library was in React.js and how to use one
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          The basic ideas behind React.js, component building, and state
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Bare basics of web development practices and principles 
+        </ListItem>
+      </List>
+    </Box>
+  );
+
+  const cardholderPortal = (
+    <Box>
+
+    </Box>
+  );
+
+  const hoffmanAnalytics = (
+    <Box>
+
+    </Box>
+  );
+
+  const dtcReportGenerator = (
+    <Box>
+
+    </Box>
+  );
+
+  const grouve = (
+    <Box>
+
+    </Box>
+  );
+
+  const socialMediaMarketing = (
+    <Box>
+
+    </Box>
+  );
+
+  const vrSpaceExplorer = (
+    <Box>
+
     </Box>
   );
   // #endregion
@@ -95,13 +184,25 @@ const ProjectDetailsContent = ({ project }) => {
         return updatedPortfolio;
       case "Legacy Portfolio":
         return legacyPortfolio;
+      case "Cardholder Portal":
+        return cardholderPortal;
+      case "Hoffman Analytics":
+        return hoffmanAnalytics;
+      case "DTC Report Generator":
+        return dtcReportGenerator;
+      case "Grouve":
+        return grouve;
+      case "Social Media Marketing":
+        return socialMediaMarketing;
+      case "Virtual Reality Space Explorer":
+        return vrSpaceExplorer;
       default:
         return;
     }
   }
 
   return (
-    <Box>
+    <Box mt={10}>
       {renderProjectContent(project)}
     </Box>
   );

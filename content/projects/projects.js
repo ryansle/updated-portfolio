@@ -9,12 +9,12 @@ export const projects = [
         description: "It's been nearly a year since I first taught myself how to write webapps using React.js. I've learned a ton since then, and decided it was finally time to update my portfolio to make it more reflective of my skills now. So, naturally, I rebuilt the entire thing from the ground up: this time, using Chakra UI.",
         stack: ["React.js", "Next.js", "Chakra UI", "React Icons"],
       },
-      { 
-        id: "pokemon-team-builder",
-        title: "Pokémon Team Builder",
-        description: "I used to play a lot of Pokémon. I always wanted to plan out the teams I would use ahead of time. I didn't find any solutions online that I liked, so I started building my own. This project is still a work in progress.",
-        stack: ["React.js", "Material-UI", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "PokéAPI"],
-      },
+      // { 
+      //   id: "pokemon-team-builder",
+      //   title: "Pokémon Team Builder",
+      //   description: "I used to play a lot of Pokémon. I always wanted to plan out the teams I would use ahead of time. I didn't find any solutions online that I liked, so I started building my own. This project is still a work in progress.",
+      //   stack: ["React.js", "Material-UI", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "PokéAPI"],
+      // },
       { 
         id: "legacy-portfolio",
         title: "Legacy Portfolio",
@@ -60,12 +60,12 @@ export const projects = [
         description: "Also known as the \"SOFTie Startup\", my peers and I campaigned our university to allow us to pursue our own entrepreneurial experience during our final year of senior design. Grouve is a platform that changes the way that events are planned using music.",
         stack: ["React.js", "Chakra UI", "Next.js", "Amazon Web Services"],
       },
-      { 
-        id: "d3-visuals",
-        title: "Web-based Interactive Data Visualization",
-        description: "Our final assignment for my Data Modeling course tasked us with visually representing states' population and GDP data within a webapp using the D3.s library. Using this library, we were able ot create interactive bar charts and scatter plots to better represent the provided dataset.",
-        stack: ["React.js", "D3.js", "Google Colab", "Python", "pandas"],
-      },
+      // { 
+      //   id: "d3-visuals",
+      //   title: "Web-based Interactive Data Visualization",
+      //   description: "Our final assignment for my Data Modeling course tasked us with visually representing states' population and GDP data within a webapp using the D3.s library. Using this library, we were able ot create interactive bar charts and scatter plots to better represent the provided dataset.",
+      //   stack: ["React.js", "D3.js", "Google Colab", "Python", "pandas"],
+      // },
       { 
         id: "social-media-marketing",
         title: "Social Media Marketing",
@@ -84,12 +84,12 @@ export const projects = [
       //   description: "We were handed broken city traffic simulator and learned to use a variety of different data structures and algorithms ranging from depth-first search to dynamic programming to repair the simulator.",
       //   stack: ["JavaScript", "HTML", "CSS"],
       // },
-      { 
-        id: "care-tracking",
-        title: "Care Tracking Application",
-        description: "A basic CRUD application that allowed you to input and parse down patient data. This was my first real project experience.",
-        stack: ["Python", "MySQL", "SQLAlchemy", "Kivy"],
-      },
+      // { 
+      //   id: "care-tracking",
+      //   title: "Care Tracking Application",
+      //   description: "A basic CRUD application that allowed you to input and parse down patient data. This was my first real project experience.",
+      //   stack: ["Python", "MySQL", "SQLAlchemy", "Kivy"],
+      // },
     ],
   },
 ];

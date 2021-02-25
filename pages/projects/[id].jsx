@@ -5,15 +5,27 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  Heading,
+  Flex,
   Box,
+  Heading,
+  Text,
+  Link,
+  Icon,
+  Tag,
 } from "@chakra-ui/react";
-import { ChevronRightIcon as ChevronRight } from "@chakra-ui/icons";
+import { 
+  ChevronRightIcon as ChevronRight, 
+  LinkIcon as Chain, 
+} from "@chakra-ui/icons";
+import { AiFillGithub as GitHub } from "react-icons/ai"
 import AppNavigation from "../../components/Navigation/AppNavigation";
 
 // Content
 import projectDetails from "../../content/projects/project-details.json";
 import ProjectDetailsContent from "../../content/projects/project-details-content";
+
+// Utilities
+import { v4 as uuid } from "uuid";
 
 const ProjectPage = (props) => {
   return (
@@ -33,12 +45,50 @@ const ProjectPage = (props) => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Box>
-        <Heading size="2xl" mb={10}>
-          {props.details.title}
-        </Heading>
-        <ProjectDetailsContent project={props.details.title} />
-      </Box>
+      <Flex justify="space-between" align="center">
+        <Box width="50%">
+          <Heading size="2xl" mb={2}>
+            {props.details.title}
+          </Heading>
+          {
+            props.details.link !== "" && (
+              <Text color="#3492D0" fontSize="lg">
+                <Chain />:{" "}
+                <Link href={props.details.link}>
+                  {props.details.link}
+                </Link> 
+              </Text>
+            )
+          }
+          {
+            props.details.github !== "" && (
+              <Text color="#3492D0" fontSize="lg">
+                <Icon as={GitHub} />:{" "} 
+                <Link>
+                  {props.details.github}
+                </Link>
+              </Text>
+            )
+          }
+        </Box>
+        <Flex width="50%" justify="flex-end">
+          {
+            props.details.stack.map((tech) => (
+              <Tag
+                key={uuid()}
+                size="lg"
+                colorScheme="teal"
+                borderRadius="full"
+                margin={1}
+              >
+                {tech}
+              </Tag>
+            ))
+          }
+        </Flex>
+      </Flex>
+
+      <ProjectDetailsContent project={props.details.title} />
     </AppNavigation>
   );
 };
