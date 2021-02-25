@@ -19,6 +19,12 @@ import {
   CheckIcon as Check 
 } from "@chakra-ui/icons";
 
+// Content
+import { hoffmanGallery } from "../../content/projects/hoffman-gallery";
+
+// Utilities
+import { v4 as uuid } from "uuid";
+
 const ProjectDetailsContent = ({ project }) => {
   const [phoneScreen] = useMediaQuery("(max-width: 985px)");
 
@@ -95,7 +101,7 @@ const ProjectDetailsContent = ({ project }) => {
         learned a TON.
       </Text>
 
-      <Heading size="lg" mb={2}>Motivation</Heading>
+      <Heading size="lg" mb={5}>Motivation</Heading>
       <Text fontSize="xl" mb={10}>
         After all, that was the whole reason I even built it in the first place: to
         learn something new while also showcasing my current skillsets to start
@@ -108,7 +114,7 @@ const ProjectDetailsContent = ({ project }) => {
         the summer learning <i>something.</i>
       </Text>
 
-      <Heading size="lg" mb={2}>How did I get started?</Heading>
+      <Heading size="lg" mb={5}>How did I get started?</Heading>
       <Text fontSize="xl" mb={10}>
         I was lucky enough at the time of getting started to have friends who were more
         than experienced with React.js. Initially, I received a lot of inspiration and help
@@ -149,7 +155,59 @@ const ProjectDetailsContent = ({ project }) => {
 
   const hoffmanAnalytics = (
     <Box>
+      <Text fontSize="xl" mb={5}>
+        Hoffman Analytics was an ambitious project that aimed to consolidate 
+        the groups' daily workflows in date warehousing, project management, 
+        report generation, and business intelligence.{" "}
+        <Link href="https://msich.dev" color="teal.500">Matt Sichterman</Link>{" "}
+        and I worked to redevelop the existing senior design solution into something
+        both more maintainable and more cohesive.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        Through months of collaboration, Matt and I rebuilt the entire platform from
+        the ground up using new technologies such as Material-UI and a variety of
+        Amazon Web Services while primarily learning on one another (and StackOverflow!)
+        when we faced problems.
+      </Text>
+      
+      <Heading size="lg" mb={5}>What did I learn?</Heading>
+      <Text fontSize="xl" mb={5}>
+        Working with the Hoffman Strategy Group was an excellent way to break into the 
+        web development domain of software engineering. It also helped that my partner
+        Matt had been sharpening his web development skills previously over the last year,
+        and was always able to point me in the right direction of growth as a newbie
+        web developer. Thanks to my time with the Hoffman Strategy Group, I learned how to:
+      </Text>
+      <List spacing={2} fontSize="xl" mb={10}>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Develop responsive React.js front-ends from the ground up
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Manage diverse client expectations from non-technical stakeholders
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Continue to practice leading the development of large-scale software systems
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Work with modern web development frameworks and technologies like React.js, Material-UI, and Amazon Web Services
+        </ListItem>
+      </List>
 
+      <Heading size="lg" mb={5}>Gallery</Heading>
+      {
+        hoffmanGallery.map((photo) => (
+          <Box key={uuid()} mb={10}>
+            <Image src={photo.image} borderRadius={5} mb={3}/>
+            <Text fontSize="xl" color="gray" align="center">
+              {photo.description}
+            </Text>
+          </Box>
+        ))
+      }
     </Box>
   );
 

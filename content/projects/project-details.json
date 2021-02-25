@@ -27,7 +27,7 @@
     "title": "Hoffman Analytics",
     "stack": ["React.js", "Material-UI", "Redux", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "GraphQL", "Create React App", "CSS"],
     "github": "",
-    "link": ""
+    "link": "https://analytics.hoffmanstrategygroup.com/"
   },
   "dtc-report-generator": {
     "title": "DTC Report Generator",
@@ -44,8 +44,8 @@
   "d3-visuals": {
     "title": "Web-based Interactive Data Visualization",
     "stack": ["React.js", "Material-UI", "d3.js", "Create React App"],
-    "github": "",
-    "link": ""
+    "github": "https://github.com/ryansle/state-populations-and-gdp-visualizations",
+    "link": "https://csce411-assignment4.netlify.app/"
   },
   "social-media-marketing": {
     "title": "Social Media Marketing",
@@ -56,7 +56,7 @@
   "vr-space-explorer": {
     "title": "Virtual Reality Space Explorer",
     "stack": ["C#", "Unity", "SteamVR", "Visual Studio"],
-    "github": "",
+    "github": "https://github.com/ethan309/mmi-vr-minigames",
     "link": ""
   },
   "traffic-simulator": {

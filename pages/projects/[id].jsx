@@ -6,6 +6,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   Flex,
+  Wrap,
   Box,
   Heading,
   Text,
@@ -22,7 +23,7 @@ import AppNavigation from "../../components/Navigation/AppNavigation";
 
 // Content
 import projectDetails from "../../content/projects/project-details.json";
-import ProjectDetailsContent from "../../content/projects/project-details-content";
+import ProjectDetailsContent from "../../content/projects/ProjectDetailsContent";
 
 // Utilities
 import { v4 as uuid } from "uuid";
@@ -71,7 +72,7 @@ const ProjectPage = (props) => {
             )
           }
         </Box>
-        <Flex width="50%" justify="flex-end">
+        <Wrap width="50%" justify="flex-end">
           {
             props.details.stack.map((tech) => (
               <Tag
@@ -85,7 +86,7 @@ const ProjectPage = (props) => {
               </Tag>
             ))
           }
-        </Flex>
+        </Wrap>
       </Flex>
 
       <ProjectDetailsContent project={props.details.title} />
