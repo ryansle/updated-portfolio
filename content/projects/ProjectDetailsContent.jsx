@@ -8,7 +8,7 @@ import {
   ListItem,
   ListIcon,
   Flex,
-  Heading,
+  Heading, 
   Image,
   Link,
   Code,
@@ -16,7 +16,8 @@ import {
 } from "@chakra-ui/react";
 import { 
   NotAllowedIcon as Bullet, 
-  CheckCircleIcon as Check 
+  CheckCircleIcon as Check,
+  InfoIcon as Feature,
 } from "@chakra-ui/icons";
 
 // Content
@@ -213,7 +214,58 @@ const ProjectDetailsContent = ({ project }) => {
 
   const dtcReportGenerator = (
     <Box>
+      <Text fontSize="xl" mb={5}>
+        Raven Industries was my first real industry experience, following my sophomore
+        year of college. It was a summer of firsts as I gained firsthand experience as 
+        to how the software development industry operated. I joined Raven's Slingshot 
+        team.
+      </Text>
+      <Text fontSize="xl" mb={5}>
+        While working at Raven, I was primarily responsible for
+        developing a report generation system that streamlined internal processes in -
+        you guessed it - internal report generation. Prior to this project, individuals
+        within the company were often tasked with filtering through a 2,000+ item 
+        Excel spreadsheet to find pertinent data for upcoming meetings, formatting it
+        into a readable report, and then using these handmade reports in their meetings.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        Needless to say, this wasn't a great system. Prior to my start date, the Slingshot
+        team took it upon themselves to transfer all of this data into a variety of MySQL
+        tables, allowing me to focus my summer on creating the actual report system that
+        communicated with this database.
+      </Text>
 
+      <Heading size="lg" mb={2}>
+        So what did the system do?
+      </Heading>
+      <List spacing={2} fontSize="xl" mb={10}>
+        <ListItem>
+          <ListIcon as={Feature} color="blue.500" />
+          Allowed internal teams at Raven to create 600+ page PDF reports in a matter of minutes
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Feature} color="blue.500" />
+          Created a consistent method of report generation, styling, and branding
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Feature} color="blue.500" />
+          Filtering of data based on relationships between components
+        </ListItem>
+      </List>
+
+      <Heading size="lg" mb={5}>Lessons Learned</Heading>
+      <Text fontSize="xl" mb={5}>
+        Being that this was my first industry experience, I was a bit clueless when I started.
+        I leaned heavily on my mentor in getting started, and working through my project. I had to
+        quickly realize that this wasn't like the classroom where you could ask as many questions
+        as you wanted, whenever you wanted.
+      </Text>
+      <Text fontSize="xl" mb={5}>
+        Thus, by far the most important lesson I learned over the summer was, in the words of my
+        mentor, "learning how to learn on my own." By establishing some guidelines on when I would
+        ask for help, and the steps I would take prior, I was forced to do more searching on
+        my own, leading me to (thankfully) become a better problem solver.
+      </Text>
     </Box>
   );
 
@@ -416,15 +468,15 @@ const ProjectDetailsContent = ({ project }) => {
       <Heading size="lg" mb={2}>Game Features</Heading>
       <List spacing={2} fontSize="xl" mb={10}>
         <ListItem>
-          <ListIcon as={Check} color="green.500" />
+          <ListIcon as={Feature} color="blue.500" />
           Rebuild a high-powered telescope using pieces scattered around an observatory
         </ListItem>
         <ListItem>
-          <ListIcon as={Check} color="green.500" />
+          <ListIcon as={Feature} color="blue.500" />
           Gaze into the night sky with your repaired telescope and search for alien planets to visit and overcome
         </ListItem>
         <ListItem>
-          <ListIcon as={Check} color="green.500" />
+          <ListIcon as={Feature} color="blue.500" />
           Explore a vast planet where the sun doesn't shine and search for remnants of stardust to light up your world
         </ListItem>
       </List>
