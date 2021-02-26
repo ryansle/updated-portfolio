@@ -23,12 +23,19 @@ const Credit = ({ person }) => {
           <Heading size="sm" mb={1}>
             Works @: {person.employment}
           </Heading>
-          <Text size="xl" color="#3492D0" mb={5}>
-            <Anchor href={`https://${person.portfolio}`}>
-              <Link />: {person.portfolio}
-            </Anchor>
-          </Text>
-          <Text fontSize="xl">{person.description}</Text>
+          {
+            person.portfolio !== "" && (
+              <Box>
+                <Text size="xl" color="#3492D0">
+                  <Anchor href={`https://${person.portfolio}`}>
+                    <Link />: {person.portfolio}
+                  </Anchor>
+                </Text>
+              </Box>
+            )
+          }
+          
+          <Text fontSize="xl" mt={5}>{person.description}</Text>
         </Box>
         <Box width="30%">
           <Image

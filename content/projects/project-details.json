@@ -1,7 +1,7 @@
 {
   "updated-portfolio": {
     "title": "Updated Portfolio",
-    "stack": ["React.js", "Next.js", "Chakra UI", "React Icons", "EmailJS"],
+    "stack": ["React.js", "Chakra UI", "Next.js", "React Icons", "EmailJS"],
     "github": "https://github.com/ryansle/updated-portfolio",
     "link": "https://ryanle.dev/"
   },
@@ -15,8 +15,8 @@
     "title": "Legacy Portfolio",
     "stack": [
       "React.js",
-      "Create React App",
       "Material-UI",
+      "Create React App",
       "React-Router",
       "CSS",
       "EmailJS"
@@ -28,12 +28,13 @@
     "title": "Cardholder Portal",
     "stack": [
       "React.js",
-      "Create React App",
       "Material-UI",
+      "Create React App",
+      "React-Router",
       "AWS DynamoDB",
       "Dishout API",
-      "React-Router",
-      "CSS"
+      "CSS",
+      "Figma"
     ],
     "github": "",
     "link": ""
@@ -43,12 +44,12 @@
     "stack": [
       "React.js",
       "Material-UI",
+      "Create React App",
       "Redux",
       "AWS Amplify",
       "AWS Cognito",
       "AWS DynamoDB",
       "GraphQL",
-      "Create React App",
       "CSS"
     ],
     "github": "",
