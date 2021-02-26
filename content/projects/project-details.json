@@ -13,19 +13,44 @@
   },
   "legacy-portfolio": {
     "title": "Legacy Portfolio",
-    "stack": ["React.js", "Create React App", "Material-UI", "React-Router", "CSS", "EmailJS"],
+    "stack": [
+      "React.js",
+      "Create React App",
+      "Material-UI",
+      "React-Router",
+      "CSS",
+      "EmailJS"
+    ],
     "github": "https://github.com/ryansle/legacy-portfolio",
     "link": "https://legacy.ryanle.dev/"
   },
   "cardholder-portal": {
     "title": "Cardholder Portal",
-    "stack": ["React.js", "Create React App", "Material-UI", "AWS DynamoDB", "Dishout API", "React-Router", "CSS"],
+    "stack": [
+      "React.js",
+      "Create React App",
+      "Material-UI",
+      "AWS DynamoDB",
+      "Dishout API",
+      "React-Router",
+      "CSS"
+    ],
     "github": "",
     "link": ""
   },
   "hoffman-analytics": {
     "title": "Hoffman Analytics",
-    "stack": ["React.js", "Material-UI", "Redux", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "GraphQL", "Create React App", "CSS"],
+    "stack": [
+      "React.js",
+      "Material-UI",
+      "Redux",
+      "AWS Amplify",
+      "AWS Cognito",
+      "AWS DynamoDB",
+      "GraphQL",
+      "Create React App",
+      "CSS"
+    ],
     "github": "",
     "link": "https://analytics.hoffmanstrategygroup.com/"
   },
@@ -37,7 +62,15 @@
   },
   "grouve": {
     "title": "Grouve",
-    "stack": ["React.js", "Chakra UI", "Next.js", "AWS Amplify", "AWS Cognito", "AWS DynamoDB", "GraphQL"],
+    "stack": [
+      "React.js",
+      "Chakra UI",
+      "Next.js",
+      "AWS Amplify",
+      "AWS Cognito",
+      "AWS DynamoDB",
+      "GraphQL"
+    ],
     "github": "",
     "link": ""
   },

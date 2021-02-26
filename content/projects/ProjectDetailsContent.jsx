@@ -8,6 +8,7 @@ import {
   ListItem,
   ListIcon,
   Flex,
+  Wrap,
   Heading, 
   Image,
   Link,
@@ -21,6 +22,7 @@ import {
 } from "@chakra-ui/icons";
 
 // Content
+import { cardholderGallery } from "../../content/projects/cardholder-portal-gallery";
 import { hoffmanGallery } from "../../content/projects/hoffman-gallery";
 
 // Utilities
@@ -150,7 +152,53 @@ const ProjectDetailsContent = ({ project }) => {
 
   const cardholderPortal = (
     <Box>
+      <Text fontSize="xl" mb={5}>
+        Our team at Nelnet, the Campus Key team, utilizes Material Design patterns on all of our web applications.
+        They're not that fun to synthesize on your own - so when I joined, I pitched that we move away from using
+        Bootstrap to style our applications and instead implement the Material-UI component framework.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        The implementation of the Material-UI framework solved a plethora problems our team faced immediately on Day
+        1. Gone were the days of having to custom build our components to match material design standards, and also 
+        the time spent searching <Link href="https://www.npmjs.com" color="teal.500">npmjs.com</Link> for the more 
+        complicated components that we didn't want to custom build.
+      </Text>
 
+      <Heading size="lg" mb={5}>What else did I do?</Heading>
+      <Text fontSize="xl" mb={10}>
+        My primary role on the Campus Key team is as a Front-End React.js Developer. My talented co-worker{" "}
+        <Link href="https://www.linkedin.com/in/ericschladweiler" color="teal.500">Eric Schladweiler</Link>{" "}
+        designs all of our user interfaces, and then it goes to me for implementation. I've continued to learn 
+        new things within the Material-UI component library, dove deeper into React.js, familiarized myself with
+        a few different APIs, and briefly worked with Amazon Web Services in my current role with Nelnet. 
+      </Text>
+
+      <Heading size="lg" mb={5}>So what's the Cardholder Portal?</Heading>
+      <Text fontSize="xl" mb={5}>
+        The Cardholder Portal is basically an administrative dashboard for our Campus Key application that will allow
+        our Campus Key users to do things like requests funds from their "sponsors" (parents, mainly, or those that are
+        helping them pay their way through college), pay off debts including meal and flex plan balances, and view
+        previous transactions tied to their accounts.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        It's one of the first steps in the Campus Key's expansion into university markets around the country in creating
+        a one-stop shop for all of your university needs.
+      </Text>
+
+      <Heading size="lg" mb={5}>Gallery</Heading>
+      <Wrap justify="space-between">
+        {
+          cardholderGallery.map((photo) => (
+            <Image 
+              key={uuid()} 
+              src={photo.image} 
+              width={phoneScreen ? "100%" : "48%"}
+              borderRadius={5} 
+              mb={8} 
+            />
+          ))
+        }
+      </Wrap>
     </Box>
   );
 
