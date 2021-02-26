@@ -219,7 +219,68 @@ const ProjectDetailsContent = ({ project }) => {
 
   const grouve = (
     <Box>
+      <Heading size="lg" mb={5}>What is Grouve?</Heading>
+      <Text fontSize="xl" mb={5}>
+        Grouve is an event planning application that empowers event hosts and planners, 
+        and allows attendees to have a say in the events they plan. Grouve is currently{" "}
+        under <b>active</b> development.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        I'm working on Grouve with{" "}
+        <Link href="https://msich.dev/" color="teal.500">Matt Sichterman</Link>,{" "}
+        <Link href="https://www.peytontanzillo.com/" color="teal.500">Peyton Tanzillo</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/sam-neupane-88a1aa151/" color="teal.500">Sam Neupane</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/wyatt-chandler-747a6416b/" color="teal.500">Wyatt Chandler</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/maggie-harder-4057a3166/" color="teal.500">Maggie Harder</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/joey-ballentine-6459a9194/" color="teal.500">Joey Ballentine</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/easton-joachimsen/" color="teal.500">Easton Joachimsen</Link>,{" "}
+        and <Link href="https://www.linkedin.com/in/ethan-d-butt/" color="teal.500">Ethan Bütt</Link>.
+        Check out their profiles!
+      </Text>
 
+      <Heading size="lg" mb={5}>Why are we building it?</Heading>
+      <Text fontSize="xl" mb={5}>
+        The 9 of us have been working on projects together all throughout our time
+        in university. We've all shared concepts, ideas, even tears throughout studies,
+        and always wondered what could become if we ever had the chance to all work together
+        towards something. Well, that something is <b>Grouve.</b>
+      </Text>
+      <Text fontSize="xl" mb={5}>
+        Along with that, part of the curriculum at the University of Nebraska-Lincoln is that,
+        as a software engineering major, you complete two full years of senior design before
+        you're eligible for graduation. At the end of our first year of senior design, our
+        group of students saw plenty of room for improvement within the curriculum.
+      </Text>
+      <Text fontSize="xl" mb={5}>
+        Senior design works like this: at the start of the year, industry comes in and pitches
+        to you, the student, why you should work on their project for a year. After that, students
+        are randomly paired to projects within their preference sheet, and voila, a random teach of
+        about 6-10 students has been assigned to an industry sponsor.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        But we had already completed a year of that, and our 9 members had a new idea to pitch:
+        what if, instead of working with an industry sponsor, we got to sponsor our <b>own</b>{" "}
+        project and create a brand new software system from the ground up?
+      </Text>
+
+      <Heading size="lg" mb={5}>Process</Heading>
+      <Text fontSize="xl" mb={5}>
+        We got the ball rolling for how SOFTie Startup, as we dubbed it, might work towards the 
+        end of our junior year, as we were all completing our first iteration of senior design. 
+        Through months of discussion, presentation, and polish, we were able to convince senior 
+        design faculty to pilot our SOFTIE Startup for the 2020-2021 academic year, with the
+        goal in mind of designing a framework for future software engineering students to come.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        In the beginning, we were lucky enough to be able to partner up with Lincoln's very own{" "}
+        <Link href="https://dontpaniclabs.com/" color="teal.500">Don't Panic Labs</Link> in
+        researching our four ideas for the SOFTie Startup and working to
+        learn which one was most viable in our ever-changing world. Once we wrapped out the 
+        business research phase of our project, we were ready to start wireframing up our ideas,
+        working on defining our business, and got started on implementation!
+      </Text>
+
+      <Heading size="lg" mb={20}>More to come...</Heading>
     </Box>
   );
 
