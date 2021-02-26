@@ -47,7 +47,7 @@ const ProjectPage = (props) => {
       </Breadcrumb>
 
       <Flex justify="space-between" align="center">
-        <Box width="50%">
+        <Box width="60%">
           <Heading size="2xl" mb={2}>
             {props.details.title}
           </Heading>
@@ -72,7 +72,7 @@ const ProjectPage = (props) => {
             )
           }
         </Box>
-        <Wrap width="50%" justify="flex-end">
+        <Wrap width="40%" justify="flex-end">
           {
             props.details.stack.map((tech) => (
               <Tag

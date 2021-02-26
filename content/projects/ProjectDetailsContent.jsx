@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { 
   NotAllowedIcon as Bullet, 
-  CheckIcon as Check 
+  CheckCircleIcon as Check 
 } from "@chakra-ui/icons";
 
 // Content
@@ -225,13 +225,152 @@ const ProjectDetailsContent = ({ project }) => {
 
   const socialMediaMarketing = (
     <Box>
+      <Text fontSize="xl" mb={5}>
+        The Social Media Marketing app, also known as Buckle Advocacy, was a year-long
+        project through my university's senior design program which pairs computer
+        science and software engineering students to industry-backed projects and sponsors.
+      </Text>
+      <Text fontSize="xl" mb={5}>
+        Once paired, the course functions similarly to an internship where students work
+        on a project throughout the year and deliver weekly status reports to the project
+        stakeholders and follow agile methodologies while communicating effectively.
+      </Text>
+      <Text fontSize="xl" mb={5}>
+        While enrolled in senior design, I took on a leadership position within my team and
+        acted as the Squad Lead and Product Manager for our team, which tasked me with
+        defining our product vision, leading our weekl meetings, creating our presentation
+        materials, and effectively capitalizing on my teammates' skillsets in order to run
+        a successful project.
+      </Text>
+      <Text fontSize="xl" mb={10}>
+        I worked on this project alongside{" "}
+        <Link href="https://www.linkedin.com/in/kaileimao" color="teal.500">Kailei Mao</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/arreyaahrom" color="teal.500">Arreya Ahrom</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/olivia-rine" color="teal.500"> Olivia Rine</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/zhaozhong-qi-64403b118" color="teal.500">Dennis Qi</Link>,{" "}
+        and <Link href="https://www.linkedin.com/in/jake-ediger-373933129" color="teal.500">Jake Ediger</Link>.
+      </Text>
 
+      <Flex justify="space-between" align="center" mb={5} flexWrap="wrap-reverse">
+        <Box width={phoneScreen ? "100%" : "60%"}>
+          <Heading size="lg" mb={5}>
+            What problem did the app solve?
+          </Heading>
+          <Text fontSize="xl" mb={5}>
+            Buckle needed a way to provide a unified and appropriate social brand that protected
+            the brand's image. Because they have so many stores across the US (449 and counting), 
+            it proved to be impractical to field and service each stores' one-off requests for
+            approving social media content.
+          </Text>
+          <Text fontSize="xl" mb={5}>
+            In order to solve this, Buckle wanted a mobile application that allowed their
+            marketing department to provide approved social media posts for their teammates
+            to use nationwide.
+          </Text>
+          <Text fontSize="xl" mb={5}>
+            Our team's solution enlisted a content management system, Drupal, to house the 
+            marketing department's approved content. From there, individual pieces of
+            content were assigned start and end dates for the content to run through, and
+            valid posts were pulled down to our iOS application using a REST API and showcased
+            to a user in a feed visually similar to Instagram.
+          </Text>
+          <Text fontSize="xl" mb={10}>
+            Marketing employees around the country could then share these approved social
+            media posts and promotions to a variety of different channels, including Facebook,
+            Instagram, Twitter, and LinkedIn with ease.
+          </Text>
+        </Box>
+        
+        <Flex justify="flex-end" width={phoneScreen ? "100%" : "40%"}>
+          <Image src="../projects/buckle.png" height="90%"/>
+        </Flex>
+      </Flex>
+
+      <Heading size="lg" mb={2}>
+        Things I learned
+      </Heading>
+      <List spacing={2} fontSize="xl" mb={10}>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          How to lead a team of 5 developers by assigning roles and development tasks
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Process for facilitating weekly commuication between with a project manager and an industry sponsor
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Practices for parsing down software requirements into manageable chunks of development work
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Gained additional experience communicating with non-technical stakeholders
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          How to develop iOS appliations and the steps it takes to deploy to a live device
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          The Swift programming language, along with Apple's new flagship technology, SwiftUI
+        </ListItem>
+      </List>
     </Box>
   );
 
   const vrSpaceExplorer = (
     <Box>
+      <Text fontSize="lg" mb={5}>
+        The University of Nebraska-Lincoln, normally, offers a technical elective
+        every spring entitled "Exploring Virtual Reality" that pairs computer science
+        and software engineering students with emerging arts students to create
+        virtual reality games.
+      </Text>
+      <Text fontSize="lg" mb={5}>
+        The course follows a sandbox format where they basically give you a quick
+        introduction to developing games with C#, Unity, and SteamVR, and then they
+        set you loose to break into teams and spend the semester developing your
+        very own virtual reality experience. Our team decided to spend the semester
+        building out a VR Space Exploration game in which you explore alien worlds
+        and play a variety of minigames.
+      </Text>
+      <Text fontSize="lg" mb={10}>
+        I worked on this project with{" "}
+        <Link href="https://www.linkedin.com/in/ethan-d-butt" color="teal.500">Ethan Bütt</Link>,{" "}
+        <Link href="https://www.linkedin.com/in/conner-hallett-8737a11a2" color="teal.500">Conner Hallett</Link>, 
+        and <Link href="https://www.linkedin.com/in/megan-whisenhunt-8b9156175" color="teal.500">Megan Whisenhunt</Link>.
+      </Text>
 
+      <Heading size="lg" mb={5}>What did I learn?</Heading>
+      <Text fontSize="xl" mb={10}>
+        Through this course I learned the basics of modern game development, 
+        specifically with regards to virtual reality. It turns out that developing 
+        virtual reality games is not nearly as complicated as it seems out to be, 
+        thanks to existing technologies and frameworks such as Unity and SteamVR. 
+        I also got to work side-by-side with emerging arts students to understand 
+        the underlying effort that goes into rendering digital assets, and again 
+        sharpen my skills working in a collaborative environment.
+      </Text>
+
+      <Heading size="lg" mb={2}>Game Features</Heading>
+      <List spacing={2} fontSize="xl" mb={10}>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Rebuild a high-powered telescope using pieces scattered around an observatory
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Gaze into the night sky with your repaired telescope and search for alien planets to visit and overcome
+        </ListItem>
+        <ListItem>
+          <ListIcon as={Check} color="green.500" />
+          Explore a vast planet where the sun doesn't shine and search for remnants of stardust to light up your world
+        </ListItem>
+      </List>
+
+      <Flex justify="center">
+        <Image src="../projects/space-explorer.png" borderRadius={10} />
+      </Flex>
     </Box>
   );
   // #endregion
