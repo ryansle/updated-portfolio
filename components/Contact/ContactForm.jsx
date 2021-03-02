@@ -82,7 +82,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Box width="46%" mt={10}>
+    <Box mt={10}>
       <Box>
         <FormControl id="contact" isRequired>
           <FormLabel>Name</FormLabel>

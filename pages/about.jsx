@@ -75,7 +75,13 @@ const About = () => {
 
       <Divider />
 
-      <Flex justify="space-between" align="center" mt={20} mb={20} flexWrap="wrap">
+      <Flex 
+        justify="space-between" 
+        align="center" 
+        mt={20} 
+        mb={phoneScreen ? 40 : 20} 
+        flexWrap="wrap"
+      >
         <Box width={phoneScreen ? "100%" : "30%"} align="center">
           <Image 
             src="./about/nebraska.svg" 

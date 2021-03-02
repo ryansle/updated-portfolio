@@ -43,7 +43,7 @@ const AppNavigation = ({ children, ...rest }) => {
               py={5}
               backgroundColor={colorMode === "light" ? "white" : "gray.800"}
               pos="absolute"
-              width="calc(100vw - 18rem)"
+              width={phoneScreen ? "100%" : "calc(100vw - 18rem)"}
               as="footer"
               bottom="0"
               mt={10}

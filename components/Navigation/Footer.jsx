@@ -9,7 +9,7 @@ import {
   // HStack,
   Link,
   // Stack,
-  // useMediaQuery,
+  useMediaQuery,
 } from "@chakra-ui/react";
 // import SocialMedia from "../SocialMedia";
 
@@ -20,7 +20,7 @@ import {
 // import { v4 as uuid } from "uuid";
 
 const Footer = () => {
-  // const [phoneScreen] = useMediaQuery("(max-width: 1200px)");
+  const [phoneScreen] = useMediaQuery("(max-width: 1200px)");
 
   return (
     <Box>
@@ -58,9 +58,11 @@ const Footer = () => {
         <Text fontSize="md" mb={3}>
           Copyright &copy; {new Date().getFullYear()} Ryan Le. All Rights Reserved.
         </Text>
-        <Text fontSize="md" mb={3}>
-          Portfolio created with <Link href="https://chakra-ui.com/" color="teal.500">Chakra UI</Link> components.
-        </Text>
+        {!phoneScreen && (
+          <Text fontSize="md" mb={3}>
+            Portfolio created with <Link href="https://chakra-ui.com/" color="teal.500">Chakra UI</Link> components.
+          </Text>
+        )}
       </Flex>
     </Box>
   );

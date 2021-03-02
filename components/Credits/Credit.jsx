@@ -3,19 +3,22 @@ import React from "react";
 // Components
 import {
   Box,
-  Wrap,
+  Flex,
   Heading,
   Text,
   Link as Anchor,
   Image,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { LinkIcon as Link } from "@chakra-ui/icons";
 
 const Credit = ({ person }) => {
+  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+
   return (
     <Box mb={15}>
-      <Wrap justify="space-between" align="center">
-        <Box width="50%">
+      <Flex justify="space-between" align="center" wrap="wrap-reverse">
+        <Box width={phoneScreen ? "100%" : "50%"}>
           <Heading size="xl">{person.name}</Heading>
           <Heading size="md" mb={1}>
             {person.role}
@@ -37,7 +40,11 @@ const Credit = ({ person }) => {
           
           <Text fontSize="xl" mt={5}>{person.description}</Text>
         </Box>
-        <Box width="30%">
+        <Box 
+          width={phoneScreen ? "100%" : "30%"} 
+          align="center"
+          mb={phoneScreen ? 5 : 0}
+        >
           <Image
             src={person.image}
             width={200}
@@ -45,7 +52,7 @@ const Credit = ({ person }) => {
             borderRadius="full"
           />
         </Box>
-      </Wrap>
+      </Flex>
     </Box>
   );
 };
