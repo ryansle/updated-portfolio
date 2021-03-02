@@ -9,7 +9,7 @@ export const projects = [
         title: "Updated Portfolio",
         description:
           "It's been nearly a year since I first taught myself how to write webapps using React.js. I've learned a ton since then, and decided it was finally time to update my portfolio to make it more reflective of my skills now. So, naturally, I rebuilt the entire thing from the ground up: this time, using Chakra UI.",
-        stack: ["React.js", "Next.js", "Chakra UI", "React Icons"],
+        stack: ["React.js", "Chakra UI", "Next.js", "React Icons"],
       },
       // {
       //   id: "pokemon-team-builder",
@@ -24,10 +24,11 @@ export const projects = [
           "Last summer, after losing my planned internship due to the ongoing pandemic, I decided to pick up React.js for the first time and try to teach myself some of the basics of modern web development. This version of my portfolio was the first thing I ever built using those new skills.",
         stack: [
           "React.js",
-          "Create React App",
           "Material-UI",
+          "Create React App",
           "React-Router",
           "CSS",
+          "EmailJS",
         ],
       },
     ],
@@ -43,7 +44,13 @@ export const projects = [
         company: "Nelnet",
         description:
           "Reworked an existing React.js implementation of the Cardholder Portal to use the Material-UI component library, and also furthered its developments.",
-        stack: ["React.js", "Material-UI", "Figma", "Amazon Web Services"],
+        stack: [
+          "React.js",
+          "Material-UI",
+          "Create-React-App",
+          "React-Router",
+          "Amazon Web Services",
+        ],
       },
       {
         id: "hoffman-analytics",
@@ -54,6 +61,7 @@ export const projects = [
         stack: [
           "React.js",
           "Material-UI",
+          "Create React App",
           "Redux",
           "Amazon Web Services",
           "GraphQL",
@@ -65,7 +73,14 @@ export const projects = [
         company: "Raven Industries",
         description:
           "A report generator tool that internal employees could use to create long-winded PDF reports of electronic component units and their details. This system replaced the previous approach of producing these reports manually by pulling information off of large spreadsheets.",
-        stack: ["JavaScript", "Kendo UI", "CSS", "MySQL", "ASP.NET Core"],
+        stack: [
+          "JavaScript",
+          "Kendo UI",
+          "jQuery",
+          "ASP.NET Core",
+          "MySQL",
+          "CSS",
+        ],
       },
     ],
   },
@@ -79,7 +94,13 @@ export const projects = [
         title: "Grouve",
         description:
           'Also known as the "SOFTie Startup", my peers and I campaigned our university to allow us to pursue our own entrepreneurial experience during our final year of senior design. Grouve is a platform that changes the way that events are planned using music.',
-        stack: ["React.js", "Chakra UI", "Next.js", "Amazon Web Services"],
+        stack: [
+          "React.js",
+          "Chakra UI",
+          "Next.js",
+          "Amazon Web Services",
+          "GraphQL",
+        ],
       },
       // {
       //   id: "d3-visuals",
@@ -92,7 +113,14 @@ export const projects = [
         title: "Social Media Marketing",
         description:
           "My senior design project last year was to create a social media marketing application on iOS for our project sponsor, the Buckle. The app consolidated their marketing department's social media posts",
-        stack: ["Swift", "SwiftUI", "Alamofire", "Kingfisher", "Drupal"],
+        stack: [
+          "Swift",
+          "SwiftUI",
+          "Alamofire",
+          "Kingfisher",
+          "TestFlight",
+          "Drupal",
+        ],
       },
       {
         id: "vr-space-explorer",

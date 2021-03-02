@@ -32,6 +32,7 @@
       "Create React App",
       "React-Router",
       "AWS DynamoDB",
+      "Material-Table",
       "Dishout API",
       "CSS",
       "Figma"
@@ -50,6 +51,7 @@
       "AWS Cognito",
       "AWS DynamoDB",
       "GraphQL",
+      "Material-Table",
       "CSS"
     ],
     "github": "",
@@ -57,7 +59,14 @@
   },
   "dtc-report-generator": {
     "title": "DTC Report Generator",
-    "stack": ["Kendo UI", "jQuery", "CSS", "ASP.NET Core"],
+    "stack": [
+      "JavaScript",
+      "Kendo UI",
+      "jQuery",
+      "ASP.NET Core",
+      "MySQL",
+      "CSS"
+    ],
     "github": "",
     "link": ""
   },
@@ -83,7 +92,14 @@
   },
   "social-media-marketing": {
     "title": "Social Media Marketing",
-    "stack": ["Swift", "SwiftUI", "Alamofire", "Kingfisher", "Drupal"],
+    "stack": [
+      "Swift",
+      "SwiftUI",
+      "Alamofire",
+      "Kingfisher",
+      "TestFlight",
+      "Drupal"
+    ],
     "github": "",
     "link": ""
   },
