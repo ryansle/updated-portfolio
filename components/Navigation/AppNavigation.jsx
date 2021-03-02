@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import SideNav from "./SideNav";
 import Header from "./Header";
+import Footer from "./Footer";
 
 const AppNavigation = ({ children, ...rest }) => {
   const { colorMode } = useColorMode();
@@ -34,6 +35,16 @@ const AppNavigation = ({ children, ...rest }) => {
               {...rest}
             >
               {children}
+            </Box>
+            <Box 
+              px={phoneScreen ? "10%" : "2%"} 
+              borderWidth="1px" 
+              mx={-1}
+              py={5}
+              mt={10}
+              backgroundColor={colorMode === "light" ? "white" : "gray.800"}
+            >
+              <Footer />
             </Box>
           </Box>
         </Box>

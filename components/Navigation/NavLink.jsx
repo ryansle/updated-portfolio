@@ -15,6 +15,10 @@ const NavLink = ({ children, ...props }) => {
     isActive = true;
   }
 
+  if (router.pathname.startsWith("/projects") && props.href.startsWith("/projects")) {
+    isActive = true;
+  }
+
   return (
     <Link passHref {...props}>
       {typeof children === "function" ? children(isActive) : children}

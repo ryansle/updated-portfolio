@@ -37,7 +37,7 @@ const ProjectPage = (props) => {
       <Box>
         <Breadcrumb
           spacing="8px"
-          separator={<ChevronRight color="gray.500" />}
+          separator={<ChevronRight color="gray" />}
           fontSize="xl"
           mb={5}
         >

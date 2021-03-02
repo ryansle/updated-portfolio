@@ -6,11 +6,11 @@ import AppNavigation from "../components/Navigation/AppNavigation";
 import ContactForm from "../components/Contact/ContactForm";
 import SocialMedia from "../components/SocialMedia";
 
-// Utilities
-import { v4 as uuid } from "uuid";
-
 // Content
 import { socials } from "../content/social-media";
+
+// Utilities
+import { v4 as uuid } from "uuid";
 
 const Contact = () => {
   return (
