@@ -20,10 +20,12 @@ const ProjectGroup = ({ title, description, projects }) => {
         {projects.map((project) => (
           <ProjectPreview
             key={uuid()}
+            id={project.id}
             title={project.title}
             company={project.company}
             description={project.description}
             stack={project.stack}
+            pageContents={project.modal}
           />
         ))}
       </Wrap>

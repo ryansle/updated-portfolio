@@ -1,0 +1,108 @@
+{
+  "updated-portfolio": {
+    "title": "Updated Portfolio",
+    "stack": ["React.js", "Chakra UI", "Next.js", "React Icons", "EmailJS"],
+    "github": "https://github.com/ryansle/updated-portfolio",
+    "link": "https://ryanle.dev/"
+  },
+  "pokemon-team-builder": {
+    "title": "Pokémon Team Builder",
+    "stack": [],
+    "github": "",
+    "link": ""
+  },
+  "legacy-portfolio": {
+    "title": "Legacy Portfolio",
+    "stack": [
+      "React.js",
+      "Material-UI",
+      "Create React App",
+      "React-Router",
+      "CSS",
+      "EmailJS"
+    ],
+    "github": "https://github.com/ryansle/legacy-portfolio",
+    "link": "https://legacy.ryanle.dev/"
+  },
+  "cardholder-portal": {
+    "title": "Cardholder Portal",
+    "stack": [
+      "React.js",
+      "Material-UI",
+      "Create React App",
+      "React-Router",
+      "AWS DynamoDB",
+      "Dishout API",
+      "CSS",
+      "Figma"
+    ],
+    "github": "",
+    "link": ""
+  },
+  "hoffman-analytics": {
+    "title": "Hoffman Analytics",
+    "stack": [
+      "React.js",
+      "Material-UI",
+      "Create React App",
+      "Redux",
+      "AWS Amplify",
+      "AWS Cognito",
+      "AWS DynamoDB",
+      "GraphQL",
+      "CSS"
+    ],
+    "github": "",
+    "link": "https://analytics.hoffmanstrategygroup.com/"
+  },
+  "dtc-report-generator": {
+    "title": "DTC Report Generator",
+    "stack": ["Kendo UI", "jQuery", "CSS", "ASP.NET Core"],
+    "github": "",
+    "link": ""
+  },
+  "grouve": {
+    "title": "Grouve",
+    "stack": [
+      "React.js",
+      "Chakra UI",
+      "Next.js",
+      "AWS Amplify",
+      "AWS Cognito",
+      "AWS DynamoDB",
+      "GraphQL"
+    ],
+    "github": "",
+    "link": ""
+  },
+  "d3-visuals": {
+    "title": "Web-based Interactive Data Visualization",
+    "stack": ["React.js", "Material-UI", "d3.js", "Create React App"],
+    "github": "https://github.com/ryansle/state-populations-and-gdp-visualizations",
+    "link": "https://csce411-assignment4.netlify.app/"
+  },
+  "social-media-marketing": {
+    "title": "Social Media Marketing",
+    "stack": ["Swift", "SwiftUI", "Alamofire", "Kingfisher", "Drupal"],
+    "github": "",
+    "link": ""
+  },
+  "vr-space-explorer": {
+    "title": "Virtual Reality Space Explorer",
+    "stack": ["C#", "Unity", "SteamVR", "Visual Studio"],
+    "github": "https://github.com/ethan309/mmi-vr-minigames",
+    "link": ""
+  },
+  "traffic-simulator": {
+    "title": "Traffic Simulator",
+    "stack": ["JavaScrpt", "HTML", "CSS"],
+    "github": "",
+    "link": ""
+  },
+  "care-tracking": {
+    "title": "Care Tracking Application",
+    "stack": ["Python", "Kivy", "MySQL", "SQLAlchemy"],
+    "github": "",
+    "link": ""
+  }
+}
