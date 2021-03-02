@@ -33,7 +33,7 @@ const Contact = () => {
       </HStack>
 
       <Heading size="lg" mb={5}>Connect with me on Social Media</Heading>
-      <HStack spacing={6}>
+      <HStack spacing={6} mb={20}>
         {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
       </HStack>
     </AppNavigation>

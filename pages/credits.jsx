@@ -12,7 +12,7 @@ const Credits = () => {
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl">Credits</Heading>
-      <Box mt={10}>
+      <Box mt={10} mb={20}>
         <Text fontSize="xl" mb={10}>
           I had help building this portfolio. A lot of it, actually, 
           and it couldn't have ended up looking this nice without any

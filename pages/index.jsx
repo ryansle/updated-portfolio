@@ -24,7 +24,7 @@ const Home = () => {
           what makes me a great addition to your development team.
         </Text>
 
-        <Wrap pt={10} justify="center">
+        <Wrap pt={10} justify="center" mb={20}>
           {nav.map((card) => (
             <NavCard 
               key={uuid()}

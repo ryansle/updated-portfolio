@@ -20,7 +20,7 @@ import {
 // import { v4 as uuid } from "uuid";
 
 const Footer = () => {
-  // const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+  // const [phoneScreen] = useMediaQuery("(max-width: 1200px)");
 
   return (
     <Box>
@@ -54,11 +54,11 @@ const Footer = () => {
           </HStack>
         </Box>
       </Flex> */}
-      <Flex justify="space-between">
-        <Text fontSize="md">
+      <Flex justify="space-between" wrap="wrap">
+        <Text fontSize="md" mb={3}>
           Copyright &copy; {new Date().getFullYear()} Ryan Le. All Rights Reserved.
         </Text>
-        <Text fontSize="md">
+        <Text fontSize="md" mb={3}>
           Portfolio created with <Link href="https://chakra-ui.com/" color="teal.500">Chakra UI</Link> components.
         </Text>
       </Flex>

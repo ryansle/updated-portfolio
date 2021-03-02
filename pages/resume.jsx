@@ -15,18 +15,17 @@ const Resume = () => {
           through your company's applicant tracking system.
         </Text>
 
-        <Box borderRadius="full">
+        <Box borderRadius="full" mb={20}>
           <Center>
-          <iframe 
-            src="./resume.pdf" 
-            width="90%"
-            height="800px"
-            title="My Resume"
-            allowFullScreen="" 
-            frameBorder="0"
-          />
+            <iframe 
+              src="./resume.pdf" 
+              width="90%"
+              height="800px"
+              title="My Resume"
+              allowFullScreen="" 
+              frameBorder="0"
+            />
           </Center>
-          
         </Box>
       </Box>
     </AppNavigation>

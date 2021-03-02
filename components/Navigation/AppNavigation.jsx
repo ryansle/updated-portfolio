@@ -38,11 +38,15 @@ const AppNavigation = ({ children, ...rest }) => {
             </Box>
             <Box 
               px={phoneScreen ? "10%" : "2%"} 
-              borderWidth="1px" 
-              mx={-1}
+              borderTop="1px"
+              borderColor="gray.600" 
               py={5}
-              mt={10}
               backgroundColor={colorMode === "light" ? "white" : "gray.800"}
+              pos="absolute"
+              width="calc(100vw - 18rem)"
+              as="footer"
+              bottom="0"
+              mt={10}
             >
               <Footer />
             </Box>
