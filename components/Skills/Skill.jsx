@@ -7,10 +7,13 @@ import {
   Flex,
   Image,
   Text,
+  useMediaQuery
 } from "@chakra-ui/react";
 import { StarIcon as Star } from "@chakra-ui/icons";
 
 const Skill = ({ icon, radii, name, experience, rating }) => {
+  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+
   return (
     <Tr>
       <Td>
@@ -43,7 +46,7 @@ const Skill = ({ icon, radii, name, experience, rating }) => {
                 <Star 
                   key={i} 
                   color={i < rating ? "teal.500" : "gray.300"} 
-                  mr={1}
+                  mr={phoneScreen ? 0 : 1}
                 />
               ))
           }

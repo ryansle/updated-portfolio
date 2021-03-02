@@ -1,24 +1,53 @@
 import React from "react";
 
 // Components
-import { Heading, Text, } from "@chakra-ui/react";
+import { 
+  Heading, 
+  Text, 
+  Flex, 
+  Box, 
+  useMediaQuery 
+} from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
+import Legend from "../components/Skills/Legend";
 import SkillTable from "../components/Skills/SkillTable";
 
 // Content
 import { webdev, mobiledev, languages, other } from "../content/skills";
 
 const Skills = () => {
+  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={10}>My Skillsets</Heading>
-      <Heading size="lg" mb={5}>Web Development</Heading>
-      <Text fontSize="xl" mb={5}>
-        Primarily, my skillsets are in builing web applications - specifically the front-ends. 
-        I'm hoping in time to pivot more towards full-stack web development so that I can build
-        out every aspect of my applications from start to finish. Here are some of my favorite
-        technologies to use at the moment:
-      </Text>
+      <Flex justify="space-between" align="flex-start" wrap="wrap">
+        <Box width={phoneScreen ? "100%" : "54%"}>
+          <Heading size="lg" mb={5}>Web Development</Heading>
+          <Text fontSize="xl" mb={5}>
+            Primarily, my skillsets are in builing web applications - specifically the front-ends. 
+            I'm hoping in time to pivot more towards full-stack web development so that I can build
+            out every aspect of my applications from start to finish. Here are some of my favorite
+            technologies to use at the moment:
+          </Text>
+
+          <Box 
+            width="full" 
+            borderRadius={10}
+            p={3}
+            pl={5}
+            backgroundColor="#3E3D3C"
+            mb={10}
+          >
+            <Text fontSize="lg">
+              Note: Experiences are truncated to <b>latest three</b> experiences in order to improve readability.
+            </Text>
+          </Box>
+        </Box>
+        <Box width={phoneScreen ? "100%" : "40%"} mb={phoneScreen ? 10 : 0}>
+          <Legend />
+        </Box>
+      </Flex>
       <SkillTable 
         caption="Technologies I use regularly in my career as a web developer."
         skills={webdev} 
