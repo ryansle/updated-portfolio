@@ -37,7 +37,7 @@ const About = () => {
         mb={20} 
         flexWrap="wrap-reverse"
       >
-        <Box width={["100%", null, "100%"]}>
+        <Box width={["100%", null, "50%"]}>
           <Text fontSize="xl" mb={5}>
             Hey there, my name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
           </Text>
@@ -56,7 +56,7 @@ const About = () => {
             {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
           </HStack>
         </Box>
-        <Box width={["100%", null, "100%"]} align="center">
+        <Box width={["100%", null, "40%"]} align="center">
           <Image 
             src="./about/idaho.JPG" 
             width={500} 

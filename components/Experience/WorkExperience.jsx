@@ -39,7 +39,7 @@ const WorkExperience = ({
       </Text>
 
       <Flex justify="space-between" align="center" flexWrap="wrap-reverse">
-        <Box width={["100%", null, null, "55%"]}>
+        <Box width={["100%", null, "55%"]}>
           <Text fontSize="md" mb={6}>
             {description}
           </Text>
@@ -72,12 +72,12 @@ const WorkExperience = ({
             </Box>
           </HStack>
         </Box>
-        <Box width={["100%", null, null, "40%"]} align="center">
+        <Box width={["100%", null, "40%"]} align="center">
           <Image
             src={imagePath}
-            width={["70%", null, null, "70%"]}
-            mt={[4, null, null, 0]}
-            mb={[6, null, null, 0]}
+            width={["70%", null, "100%"]}
+            mt={[4, null, 0]}
+            mb={[6, null, 0]}
           />
         </Box>
       </Flex>
