@@ -18,8 +18,8 @@ const Home = () => {
       <Heading size="lg" mt="10px">Software Engineer. Front-End Web Developer.</Heading>
       <Box mt={10}>
         <Text fontSize="xl">
-          I rebuilt this online portfolio using the Chakra UI component library on top of React.js after spending
-          around a year out in industry and sharpening my front-end development abilities. I have learned a lot over 
+          I rebuilt this online portfolio using the Chakra UI component library and React.js after spending
+          nearly a year in industry sharpening my front-end development skills. I've learned a lot over 
           the last year, and I wanted my new portfolio to reflect that. Check out the links below to learn more about 
           what makes me a great addition to your development team.
         </Text>

@@ -89,7 +89,7 @@ export const experienceContent = [
     subtitle: "Fun Facts",
     bullets: [
       "As of April 2020, Terraria has sold 30 million copies worldwide",
-      "At the time of my recruitment, I was only 12 years old, making me the youngest quality assurance tester on the team by about a mile",
+      "At the time of my recruitment, I was only 12 years old, making me the youngest quality assurance tester on the team by a mile",
       "Terraria was never projected to become as large as it did",
       "My experience with Re-Logic games was what fueled my initial interest in software development",
     ],

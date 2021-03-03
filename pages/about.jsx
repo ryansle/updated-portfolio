@@ -50,7 +50,7 @@ const About = () => {
           <Text fontSize="xl" mb={10}>
             As such, I specialize in web development and enjoy working on projects of all shapes and sizes, ranging from deep within
             the initial design process to building out large-scale systems. In time, I am hoping to gain more full-stack experience,
-            leveraging frameworks and tools like Amazon Web Services and the serverless framework.
+            leveraging tools like Amazon Web Services and Firebase.
           </Text>
 
           <Heading size="lg" mb={5}>Connect with me on Social Media</Heading>

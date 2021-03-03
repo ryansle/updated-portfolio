@@ -72,15 +72,7 @@
   },
   "grouve": {
     "title": "Grouve",
-    "stack": [
-      "React.js",
-      "Chakra UI",
-      "Next.js",
-      "AWS Amplify",
-      "AWS Cognito",
-      "AWS DynamoDB",
-      "GraphQL"
-    ],
+    "stack": ["React.js", "Chakra UI", "Next.js", "Firebase"],
     "github": "",
     "link": ""
   },

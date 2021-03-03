@@ -8,7 +8,7 @@ export const projects = [
         id: "updated-portfolio",
         title: "Updated Portfolio",
         description:
-          "It's been nearly a year since I first taught myself how to write webapps using React.js. I've learned a ton since then, and decided it was finally time to update my portfolio to make it more reflective of my skills now. So, naturally, I rebuilt the entire thing from the ground up: this time, using Chakra UI.",
+          "It's been nearly a year since I first taught myself how to create webapps using React.js. I've learned a ton since then, and decided it was finally time to update my portfolio to make it more reflective of my skills now. So, naturally, I rebuilt the entire thing from the ground up: this time, using Chakra UI.",
         stack: ["React.js", "Chakra UI", "Next.js", "React Icons"],
       },
       // {
@@ -36,7 +36,7 @@ export const projects = [
   {
     type: "Work Projects",
     categoryDescription:
-      "Projects I've worked at out in industry that I'm allowed to talk about.",
+      "Projects I've worked on in industry that I'm allowed to talk about.",
     projects: [
       {
         id: "cardholder-portal",
@@ -94,13 +94,7 @@ export const projects = [
         title: "Grouve",
         description:
           'Also known as the "SOFTie Startup", my peers and I campaigned our university to allow us to pursue our own entrepreneurial experience during our final year of senior design. Grouve is a platform that changes the way that events are planned using music.',
-        stack: [
-          "React.js",
-          "Chakra UI",
-          "Next.js",
-          "Amazon Web Services",
-          "GraphQL",
-        ],
+        stack: ["React.js", "Chakra UI", "Next.js", "Firebase"],
       },
       // {
       //   id: "d3-visuals",
@@ -112,7 +106,7 @@ export const projects = [
         id: "social-media-marketing",
         title: "Social Media Marketing",
         description:
-          "My senior design project last year was to create a social media marketing application on iOS for our project sponsor, the Buckle. The app consolidated their marketing department's social media posts",
+          "My senior design project last year was to create a social media marketing application on iOS for our project sponsor, the Buckle. The app consolidated their marketing department's social media posts.",
         stack: [
           "Swift",
           "SwiftUI",
@@ -126,7 +120,7 @@ export const projects = [
         id: "vr-space-explorer",
         title: "Virtual Reality Space Explorer",
         description:
-          "Last year I enrolled myself in my university's 'Exploring Virtual Reality' course. In this course, we learned how to use tools like C#, Unity, and SteamVR to develop interactive virtual reality games while partnering up with Emerging Arts students at the university.",
+          'Last year I enrolled myself in my university\'s "Exploring Virtual Reality" course. In this course, we learned how to use tools like C#, Unity, and SteamVR to develop interactive virtual reality games while partnering up with Emerging Arts students at the university.',
         stack: ["C#", "Unity", "SteamVR", "Visual Studio"],
       },
       // {

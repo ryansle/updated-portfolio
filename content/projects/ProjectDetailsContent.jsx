@@ -18,7 +18,7 @@ import {
 import { 
   NotAllowedIcon as Bullet, 
   CheckCircleIcon as Check,
-  InfoIcon as Feature,
+  SettingsIcon as Gear,
 } from "@chakra-ui/icons";
 
 // Content
@@ -50,10 +50,13 @@ const ProjectDetailsContent = ({ project }) => {
         can count, and I didn't know how to use functions like <Code>arrays.map()</Code>, so there were 
         all sorts of wonky things inside.
       </Text>
+      <Text fontSize={phoneScreen ? "md" : "xl"} mb={5}>
+        So I figured the best thing I could do was just start a new and rebuild my portfolio from scratch.
+      </Text>
 
       <Flex justify="space-between" align="center" mb={10} flexWrap="wrap-reverse">
         <Box width={phoneScreen ? "100%" : "65%"}>
-          <Heading size="lg" mb={2}>Summary</Heading>
+          <Heading size="lg" mb={2}>Mistakes I made originally</Heading>
           <List spacing={2} fontSize={phoneScreen ? "md" : "xl"}>
             <ListItem>
               <ListIcon as={Bullet} color="red.500" />
@@ -88,7 +91,7 @@ const ProjectDetailsContent = ({ project }) => {
         For starters: better practices within React.js! I've learned how to build 
         more function-specific components, and some better ways to handle written content like this.
         It's not perfect yet, but it's a big step forward from my previous implementation. More
-        specifically, how to use a new component library, Chakra UI, which I've fallen in love with!
+        specifically, how to use a new component library, Chakra UI, which I've since fallen in love with.
         I also got to gain some additional practice using Next.js and some of its core functions like
         server-side rendering, routing, and more.
       </Text>
@@ -109,7 +112,7 @@ const ProjectDetailsContent = ({ project }) => {
         After all, that was the whole reason I even built it in the first place: to
         learn something new while also showcasing my current skillsets to start
         searching for new work opportunities. Up to this point in my college career, I
-        hadn't really 'focused' on any aspect of software development yet: I had tried
+        hadn't really "focused" on any aspect of software development yet: I had tried
         my hands at developing VR games, general scripting in Python, and done mobile
         development in Swift. But none of that had really piqued my interest. On top
         of that, I had recently lost a planned internship where I was going to learn
@@ -181,7 +184,7 @@ const ProjectDetailsContent = ({ project }) => {
         previous transactions tied to their accounts.
       </Text>
       <Text fontSize={phoneScreen ? "md" : "xl"} mb={10}>
-        It's one of the first steps in the Campus Key's expansion into university markets around the country in creating
+        It's one of the first steps in Campus Key's expansion into university markets around the country to create
         a one-stop shop for all of your university needs.
       </Text>
 
@@ -272,7 +275,7 @@ const ProjectDetailsContent = ({ project }) => {
         While working at Raven, I was primarily responsible for
         developing a report generation system that streamlined internal processes in -
         you guessed it - internal report generation. Prior to this project, individuals
-        within the company were often tasked with filtering through a 2,000+ item 
+        within the company were often tasked with filtering through a 2,000+ entry 
         Excel spreadsheet to find pertinent data for upcoming meetings, formatting it
         into a readable report, and then using these handmade reports in their meetings.
       </Text>
@@ -288,15 +291,15 @@ const ProjectDetailsContent = ({ project }) => {
       </Heading>
       <List spacing={2} fontSize={phoneScreen ? "md" : "xl"} mb={10}>
         <ListItem>
-          <ListIcon as={Feature} color="blue.500" />
+          <ListIcon as={Gear} color="teal.500" />
           Allowed internal teams at Raven to create 600+ page PDF reports in a matter of minutes
         </ListItem>
         <ListItem>
-          <ListIcon as={Feature} color="blue.500" />
+          <ListIcon as={Gear} color="teal.500" />
           Created a consistent method of report generation, styling, and branding
         </ListItem>
         <ListItem>
-          <ListIcon as={Feature} color="blue.500" />
+          <ListIcon as={Gear} color="teal.500" />
           Filtering of data based on relationships between components
         </ListItem>
       </List>
@@ -348,13 +351,13 @@ const ProjectDetailsContent = ({ project }) => {
       <Text fontSize={phoneScreen ? "md" : "xl"} mb={5}>
         Along with that, part of the curriculum at the University of Nebraska-Lincoln is that,
         as a software engineering major, you complete two full years of senior design before
-        you're eligible for graduation. At the end of our first year of senior design, our
+        you are eligible for graduation. At the end of our first year of senior design, our
         group of students saw plenty of room for improvement within the curriculum.
       </Text>
       <Text fontSize={phoneScreen ? "md" : "xl"} mb={5}>
         Senior design works like this: at the start of the year, industry comes in and pitches
         to you, the student, why you should work on their project for a year. After that, students
-        are randomly paired to projects within their preference sheet, and voila, a random teach of
+        are randomly paired to projects within their preference sheet, and voila, a randomized team of
         about 6-10 students has been assigned to an industry sponsor.
       </Text>
       <Text fontSize={phoneScreen ? "md" : "xl"} mb={10}>
@@ -368,7 +371,7 @@ const ProjectDetailsContent = ({ project }) => {
         We got the ball rolling for how SOFTie Startup, as we dubbed it, might work towards the 
         end of our junior year, as we were all completing our first iteration of senior design. 
         Through months of discussion, presentation, and polish, we were able to convince senior 
-        design faculty to pilot our SOFTIE Startup for the 2020-2021 academic year, with the
+        design faculty to pilot our SOFTie Startup program for the 2020-2021 academic year, with the
         goal in mind of designing a framework for future software engineering students to come.
       </Text>
       <Text fontSize={phoneScreen ? "md" : "xl"} mb={10}>
@@ -398,8 +401,8 @@ const ProjectDetailsContent = ({ project }) => {
       </Text>
       <Text fontSize={phoneScreen ? "md" : "xl"} mb={5}>
         While enrolled in senior design, I took on a leadership position within my team and
-        acted as the Squad Lead and Product Manager for our team, which tasked me with
-        defining our product vision, leading our weekl meetings, creating our presentation
+        acted as the Squad Lead and Product Manager for our team. This tasked me with
+        defining our product vision, leading our weekly meetings, creating our presentation
         materials, and effectively capitalizing on my teammates' skillsets in order to run
         a successful project.
       </Text>
@@ -469,7 +472,7 @@ const ProjectDetailsContent = ({ project }) => {
         </ListItem>
         <ListItem>
           <ListIcon as={Check} color="green.500" />
-          How to develop iOS appliations and the steps it takes to deploy to a live device
+          How to develop iOS applications and the steps it takes to deploy to a live device
         </ListItem>
         <ListItem>
           <ListIcon as={Check} color="green.500" />
@@ -516,16 +519,16 @@ const ProjectDetailsContent = ({ project }) => {
       <Heading size="lg" mb={2}>Game Features</Heading>
       <List spacing={2} fontSize={phoneScreen ? "md" : "xl"} mb={10}>
         <ListItem>
-          <ListIcon as={Feature} color="blue.500" />
+          <ListIcon as={Gear} color="teal.500" />
           Rebuild a high-powered telescope using pieces scattered around an observatory
         </ListItem>
         <ListItem>
-          <ListIcon as={Feature} color="blue.500" />
+          <ListIcon as={Gear} color="teal.500" />
           Gaze into the night sky with your repaired telescope and search for alien planets to visit and overcome
         </ListItem>
         <ListItem>
-          <ListIcon as={Feature} color="blue.500" />
-          Explore a vast planet where the sun doesn't shine and search for remnants of stardust to light up your world
+          <ListIcon as={Gear} color="teal.500" />
+          Explore a vast planet where the sun does not shine and search for remnants of stardust to light up your world
         </ListItem>
       </List>
 

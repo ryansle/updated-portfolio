@@ -33,7 +33,7 @@ export const webdev = [
   {
     image: "../skills/amplify.png",
     title: "AWS Amplify",
-    experience: "A Novel Idea Bookstore, Grouve, Hoffman Strategy Group",
+    experience: "A Novel Idea Bookstore, Hoffman Strategy Group",
     rating: 3,
   },
   {
@@ -137,7 +137,7 @@ export const languages = [
     image: "../skills/mysql.png",
     title: "MySQL",
     experience: "Nelnet, Raven Industries, University of Nebraska-Lincoln...",
-    rating: 4,
+    rating: 3,
   },
 ];
 
