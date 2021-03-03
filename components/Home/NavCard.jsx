@@ -9,7 +9,6 @@ import {
   Text,
   Image,
   Icon,
-  useMediaQuery,
   useColorMode,
 } from "@chakra-ui/react";
 import { AiOutlinePaperClip as Resume } from "react-icons/ai";
@@ -23,8 +22,6 @@ import {
 
 const NavCard = ({ image, icon, title, description, link, linkText }) => {
   // Responsive hooks
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
-  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
   const { colorMode } = useColorMode();
 
   const renderIcon = (icon) => {
@@ -50,10 +47,10 @@ const NavCard = ({ image, icon, title, description, link, linkText }) => {
     <Box
       borderWidth="1px"
       borderRadius="lg"
-      mx={phoneScreen ? 0 : 4}
+      mx={[0, null, 2]}
       mb={8}
       backgroundColor={colorMode === "light" ? "white" : "gray.800"}
-      width={phoneScreen ? "100%" : tabletScreen ? "45%" : "30%"}
+      width={["100%", null, "47%", "30%"]}
     >
       <Image
         src={image}

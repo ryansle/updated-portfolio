@@ -34,12 +34,12 @@ const ProjectPage = (props) => {
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Box px={phoneScreen ? 2 : 0}>
+      <Box px={[2, null, 0]}>
         <Breadcrumb
           spacing="8px"
           separator={<ChevronRight color="gray" />}
-          fontSize={phoneScreen ? "sm" : "xl"}
-          mb={phoneScreen ? 2 : 5}
+          fontSize={["md", null, "xl"]}
+          mb={[2, null, 5]}
         >
           <BreadcrumbItem>
             <BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
@@ -51,13 +51,13 @@ const ProjectPage = (props) => {
         </Breadcrumb>
 
         <Flex justify="space-between" align="center" wrap="wrap">
-          <Box width={phoneScreen ? "100%" : "60%"} mb={phoneScreen ? 5 : 0}>
+          <Box width={["100%", null, "60%"]} mb={[5, null, 0]}>
             <Heading size={phoneScreen ? "lg" : "2xl"} mb={2}>
               {props.details.title}
             </Heading>
             {
               props.details.link !== "" && (
-                <Text color="#3492D0" fontSize={phoneScreen ? "xs" : "lg"}>
+                <Text color="#3492D0" fontSize={["xs", "sm", null, "lg"]}>
                   <Chain />:{" "}
                   <Link href={props.details.link}>
                     {props.details.link}
@@ -67,7 +67,7 @@ const ProjectPage = (props) => {
             }
             {
               props.details.github !== "" && (
-                <Text color="#3492D0" fontSize={phoneScreen ? "xs" : "lg"}>
+                <Text color="#3492D0" fontSize={["xs", "sm", null, "lg"]}>
                   <Icon as={GitHub} />:{" "} 
                   <Link>
                     {props.details.github}
@@ -76,7 +76,10 @@ const ProjectPage = (props) => {
               )
             }
           </Box>
-          <Wrap width={phoneScreen ? "100%" : "40%"} justify={phoneScreen ? "flex-start" : "flex-end"}>
+          <Wrap 
+            width={["100%", null, "40%"]}
+            justify={["flex-start", null, "flex-end"]}
+          >
             {
               props.details.stack.map((tech) => (
                 <Tag

@@ -8,7 +8,6 @@ import {
   Button, 
   Tag, 
   Link,
-  useMediaQuery,
   useColorMode
 } from "@chakra-ui/react";
 
@@ -22,8 +21,6 @@ const ProjectPreview = ({
   description,
   stack,
 }) => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
-  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
   const { colorMode } = useColorMode();
 
   return (
@@ -31,10 +28,10 @@ const ProjectPreview = ({
       borderWidth="1px"
       borderRadius="lg"
       padding={5}
-      mr={5}
+      mr={[0, null, null, 5]}
       mb={5}
       backgroundColor={colorMode === "light" ? "white" : "gray.800"}
-      width={phoneScreen ? "100%" : (tabletScreen ? "45%" : "31%")}
+      width={["100%", null, "45%", "31%"]}
     >
       <Heading size="md" mb={company === "" ? 5 : 2}>
         {title}

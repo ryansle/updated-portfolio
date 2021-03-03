@@ -8,17 +8,14 @@ import {
   Text,
   Link as Anchor,
   Image,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import { LinkIcon as Link } from "@chakra-ui/icons";
 
 const Credit = ({ person }) => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
-
   return (
     <Box mb={15}>
       <Flex justify="space-between" align="center" wrap="wrap-reverse">
-        <Box width={tabletScreen ? "100%" : "50%"}>
+        <Box width={["100%", null, "60%", "50%"]}>
           <Heading size="xl">{person.name}</Heading>
           <Heading size="md" mb={1}>
             {person.role}
@@ -41,9 +38,9 @@ const Credit = ({ person }) => {
           <Text fontSize="xl" mt={5}>{person.description}</Text>
         </Box>
         <Box 
-          width={tabletScreen ? "100%" : "30%"} 
+          width={["100%", null, "40%", "30%"]} 
           align="center"
-          mb={tabletScreen ? 5 : 0}
+          mb={[5, null, null, 0]}
         >
           <Image
             src={person.image}

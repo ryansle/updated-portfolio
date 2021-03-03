@@ -1,23 +1,18 @@
 import React from "react";
 
 // Components
-import { 
-  Box, 
-  useColorMode, 
-  useMediaQuery 
-} from "@chakra-ui/react";
+import { Box, useColorMode, } from "@chakra-ui/react";
 import SideNav from "./SideNav";
 import Header from "./Header";
 // import Footer from "./Footer";
 
 const AppNavigation = ({ children, ...rest }) => {
   const { colorMode } = useColorMode();
-  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
-
+ 
   return (
     <Box>
       <Header />
-      <Box>
+      <Box px={[4, null, 8]} backgroundColor={colorMode === "light" ? "gray.100" : "gray.900"}>
         <SideNav
           display={["none", null, "block"]}
           maxWidth="18rem"
@@ -26,14 +21,9 @@ const AppNavigation = ({ children, ...rest }) => {
         <Box pl={[0, null, "18rem"]} marginTop="4rem">
           <Box
             as="section"
-            backgroundColor={colorMode === "light" ? "gray.100" : "gray.900"}
             minHeight="calc(100vh - 4rem)"
           >
-            <Box 
-              py="2em"
-              px={phoneScreen ? "10%" : "2%"} 
-              {...rest}
-            >
+            <Box py="2em" {...rest}>
               {children}
             </Box>
             {/* <Box 

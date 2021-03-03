@@ -1,13 +1,7 @@
 import React from "react";
 
 // Components
-import { 
-  Heading, 
-  Text, 
-  Flex, 
-  Box, 
-  useMediaQuery 
-} from "@chakra-ui/react";
+import { Heading, Text, Flex, Box, } from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
 import Note from "../components/Note";
 import Legend from "../components/Skills/Legend";
@@ -17,13 +11,11 @@ import SkillTable from "../components/Skills/SkillTable";
 import { webdev, mobiledev, languages, other } from "../content/skills";
 
 const Skills = () => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
-
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={10}>My Skillsets</Heading>
       <Flex justify="space-between" align="flex-start" wrap="wrap">
-        <Box width={tabletScreen ? "100%" : "54%"}>
+        <Box width={["100%", null, null, "54%"]}>
           <Heading size="lg" mb={5}>Web Development</Heading>
           <Text fontSize="xl" mb={5}>
             Primarily, my skillsets are in builing web applications - specifically the front-ends. 
@@ -37,7 +29,7 @@ const Skills = () => {
             It has also been hidden from mobile devices, as the tables can't expand large enough.
           </Note>
         </Box>
-        <Box width={tabletScreen ? "100%" : "40%"} mb={tabletScreen ? 10 : 0}>
+        <Box width={["100%", null, null, "40%"]} mb={[10, null, null, 0]}>
           <Legend />
         </Box>
       </Flex>

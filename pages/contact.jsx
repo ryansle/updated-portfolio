@@ -7,7 +7,6 @@ import {
   HStack, 
   Box, 
   Text, 
-  useMediaQuery 
 } from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
 import ContactForm from "../components/Contact/ContactForm";
@@ -20,8 +19,6 @@ import { socials } from "../content/social-media";
 import { v4 as uuid } from "uuid";
 
 const Contact = () => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
-
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={5}>Let's Talk!</Heading>
@@ -31,10 +28,10 @@ const Contact = () => {
         wrap="wrap-reverse" 
         align="center"
       >
-        <Box width={tabletScreen ? "100%" : "45%"}>
+        <Box width={["100%", null, null, "45%"]}>
           <ContactForm />
         </Box>
-        <Box width={tabletScreen ? "100%" : "45%"}>
+        <Box width={["100%", null, null, "45%"]}>
           <Text fontSize="xl" mb={5}>
             Liking what you see on my website? Need a dedicated new team member
             to collaborate with, or have a million dollar idea to discuss? Shoot
@@ -49,7 +46,7 @@ const Contact = () => {
       </Flex>
 
       <Heading size="lg" mb={5}>Connect with me on Social Media</Heading>
-      <HStack spacing={6} mb={tabletScreen ? 40 : 20}>
+      <HStack spacing={6} mb={30, null, null, 20}>
         {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
       </HStack>
     </AppNavigation>

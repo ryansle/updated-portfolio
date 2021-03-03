@@ -12,7 +12,6 @@ import {
 import { StarIcon as Star } from "@chakra-ui/icons";
 
 const Skill = ({ icon, radii, name, experience, rating }) => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
   const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   return (
@@ -51,7 +50,7 @@ const Skill = ({ icon, radii, name, experience, rating }) => {
                 <Star 
                   key={i} 
                   color={i < rating ? "teal.500" : "gray.300"} 
-                  mr={tabletScreen ? 0 : 1}
+                  mr={[0, null, null, 1]}
                 />
               ))
           }
