@@ -9,6 +9,7 @@ import {
   useMediaQuery 
 } from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
+import Note from "../components/Note";
 import Legend from "../components/Skills/Legend";
 import SkillTable from "../components/Skills/SkillTable";
 
@@ -31,19 +32,10 @@ const Skills = () => {
             technologies to use at the moment:
           </Text>
 
-          <Box 
-            width="full" 
-            borderRadius={10}
-            p={3}
-            pl={5}
-            backgroundColor="#3E3D3C"
-            mb={10}
-          >
-            <Text fontSize="lg">
-              Note: Experiences are truncated to <b>latest three</b> experiences in order to improve readability.
-              It has also been hidden from mobile devices, as the tables can't expand large enough.
-            </Text>
-          </Box>
+          <Note>
+            Note: Experiences are truncated to <b>latest three</b> experiences in order to improve readability.
+            It has also been hidden from mobile devices, as the tables can't expand large enough.
+          </Note>
         </Box>
         <Box width={tabletScreen ? "100%" : "40%"} mb={tabletScreen ? 10 : 0}>
           <Legend />

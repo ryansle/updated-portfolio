@@ -15,7 +15,7 @@ const AppNavigation = ({ children, ...rest }) => {
   const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   return (
-    <>
+    <Box>
       <Header />
       <Box>
         <SideNav
@@ -53,7 +53,7 @@ const AppNavigation = ({ children, ...rest }) => {
           </Box>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 

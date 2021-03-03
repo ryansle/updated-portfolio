@@ -10,6 +10,7 @@ import {
   Image,
   Icon,
   useMediaQuery,
+  useColorMode,
 } from "@chakra-ui/react";
 import { AiOutlinePaperClip as Resume } from "react-icons/ai";
 import { IoPerson as Person } from "react-icons/io5";
@@ -24,6 +25,7 @@ const NavCard = ({ image, icon, title, description, link, linkText }) => {
   // Responsive hooks
   const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
   const [phoneScreen] = useMediaQuery("(max-width: 600px)");
+  const { colorMode } = useColorMode();
 
   const renderIcon = (icon) => {
     switch (icon) {
@@ -50,6 +52,7 @@ const NavCard = ({ image, icon, title, description, link, linkText }) => {
       borderRadius="lg"
       mx={phoneScreen ? 0 : 4}
       mb={8}
+      backgroundColor={colorMode === "light" ? "white" : "gray.800"}
       width={phoneScreen ? "100%" : tabletScreen ? "45%" : "30%"}
     >
       <Image

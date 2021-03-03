@@ -11,6 +11,7 @@ import {
   Textarea,
   Button,
   useToast,
+  useColorMode,
 } from "@chakra-ui/react";
 import { AiOutlineClear as Clear } from "react-icons/ai";
 import { BiMailSend as Send } from "react-icons/bi";
@@ -28,6 +29,7 @@ const ContactForm = () => {
   const [loadingSend, setLoadingSend] = useState(false);
 
   const toast = useToast();
+  const { colorMode } = useColorMode();
 
   const updateName = (e) => setName(e.target.value);
   const updateEmail = (e) => setEmail(e.target.value);
@@ -91,6 +93,7 @@ const ContactForm = () => {
             onChange={updateName}
             value={name}
             mb={5}
+            backgroundColor={colorMode === "light" ? "white" : ""}
           />
           <FormLabel>Email Address</FormLabel>
           <Input
@@ -101,6 +104,8 @@ const ContactForm = () => {
             errorBorderColor="crimson"
             value={email}
             mb={validEmail ? 5 : 0}
+            backgroundColor={colorMode === "light" ? "white" : ""}
+
           />
           {!validEmail && (
             <FormHelperText mb={5}>Error: Invalid email.</FormHelperText>
@@ -111,6 +116,8 @@ const ContactForm = () => {
             onChange={updateSubject}
             value={subject}
             mb={5}
+            backgroundColor={colorMode === "light" ? "white" : ""}
+
           />
           <FormLabel>Message</FormLabel>
           <Textarea
@@ -119,6 +126,8 @@ const ContactForm = () => {
             onChange={updateMessage}
             value={message}
             mb={5}
+            backgroundColor={colorMode === "light" ? "white" : ""}
+
           />
         </FormControl>
 
