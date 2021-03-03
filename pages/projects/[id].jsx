@@ -30,15 +30,16 @@ import ProjectDetailsContent from "../../content/projects/ProjectDetailsContent"
 import { v4 as uuid } from "uuid";
 
 const ProjectPage = (props) => {
+  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Box>
+      <Box px={phoneScreen ? 2 : 0}>
         <Breadcrumb
           spacing="8px"
           separator={<ChevronRight color="gray" />}
-          fontSize="xl"
-          mb={5}
+          fontSize={phoneScreen ? "sm" : "xl"}
+          mb={phoneScreen ? 2 : 5}
         >
           <BreadcrumbItem>
             <BreadcrumbLink href="/projects">Projects</BreadcrumbLink>
@@ -49,14 +50,14 @@ const ProjectPage = (props) => {
           </BreadcrumbItem>
         </Breadcrumb>
 
-        <Flex justify="space-between" align="center">
-          <Box width="60%">
-            <Heading size="2xl" mb={2}>
+        <Flex justify="space-between" align="center" wrap="wrap">
+          <Box width={phoneScreen ? "100%" : "60%"} mb={phoneScreen ? 5 : 0}>
+            <Heading size={phoneScreen ? "lg" : "2xl"} mb={2}>
               {props.details.title}
             </Heading>
             {
               props.details.link !== "" && (
-                <Text color="#3492D0" fontSize="lg">
+                <Text color="#3492D0" fontSize={phoneScreen ? "xs" : "lg"}>
                   <Chain />:{" "}
                   <Link href={props.details.link}>
                     {props.details.link}
@@ -66,7 +67,7 @@ const ProjectPage = (props) => {
             }
             {
               props.details.github !== "" && (
-                <Text color="#3492D0" fontSize="lg">
+                <Text color="#3492D0" fontSize={phoneScreen ? "xs" : "lg"}>
                   <Icon as={GitHub} />:{" "} 
                   <Link>
                     {props.details.github}
@@ -75,12 +76,12 @@ const ProjectPage = (props) => {
               )
             }
           </Box>
-          <Wrap width="40%" justify="flex-end">
+          <Wrap width={phoneScreen ? "100%" : "40%"} justify={phoneScreen ? "flex-start" : "flex-end"}>
             {
               props.details.stack.map((tech) => (
                 <Tag
                   key={uuid()}
-                  size="lg"
+                  size={phoneScreen ? "sm" : "lg"}
                   colorScheme="teal"
                   borderRadius="full"
                   margin={1}
