@@ -30,7 +30,6 @@ import ProjectDetailsContent from "../../content/projects/ProjectDetailsContent"
 import { v4 as uuid } from "uuid";
 
 const ProjectPage = (props) => {
-  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">

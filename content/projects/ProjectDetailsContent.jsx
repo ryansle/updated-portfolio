@@ -29,7 +29,8 @@ import { hoffmanGallery } from "../../content/projects/hoffman-gallery";
 import { v4 as uuid } from "uuid";
 
 const ProjectDetailsContent = ({ project }) => {
-  const [phoneScreen] = useMediaQuery("(max-width: 985px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
+  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   // #region Project Detail Content
   const updatedPortfolio = (

@@ -30,7 +30,7 @@ const WorkExperience = ({
   imagePath,
 }) => {
   // Responsive hooks
-  const [tabletScreen] = useMediaQuery("(max-width: 1340px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <Box width="full" mt={10}>

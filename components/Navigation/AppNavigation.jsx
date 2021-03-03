@@ -8,11 +8,11 @@ import {
 } from "@chakra-ui/react";
 import SideNav from "./SideNav";
 import Header from "./Header";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const AppNavigation = ({ children, ...rest }) => {
   const { colorMode } = useColorMode();
-  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   return (
     <>
@@ -36,20 +36,20 @@ const AppNavigation = ({ children, ...rest }) => {
             >
               {children}
             </Box>
-            <Box 
+            {/* <Box 
               px={phoneScreen ? "10%" : "2%"} 
               borderTop="1px"
               borderColor="gray.600" 
               py={5}
               backgroundColor={colorMode === "light" ? "white" : "gray.800"}
               pos="absolute"
-              width={phoneScreen ? "100%" : "calc(100vw - 18rem)"}
+              maxWidth={phoneScreen ? "100%" : "calc(100vw - 18rem)"}
               as="footer"
               bottom="0"
               mt={10}
             >
               <Footer />
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Box>

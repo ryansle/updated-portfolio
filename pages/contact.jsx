@@ -13,16 +13,16 @@ import { socials } from "../content/social-media";
 import { v4 as uuid } from "uuid";
 
 const Contact = () => {
-  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl">Let's Talk!</Heading>
       <Flex justify="space-between" mb={20} wrap="wrap-reverse">
-        <Box width={phoneScreen ? "100%" : "45%"}>
+        <Box width={tabletScreen ? "100%" : "45%"}>
           <ContactForm />
         </Box>
-        <Box width={phoneScreen ? "100%" : "45%"}>
+        <Box width={tabletScreen ? "100%" : "45%"}>
           <Text fontSize="xl" mb={5}>
             Liking what you see on my website? Need a dedicated new team member
             to collaborate with, or have a million dollar idea to discuss? Shoot
@@ -37,7 +37,7 @@ const Contact = () => {
       </Flex>
 
       <Heading size="lg" mb={5}>Connect with me on Social Media</Heading>
-      <HStack spacing={6} mb={phoneScreen ? 40 : 20}>
+      <HStack spacing={6} mb={tabletScreen ? 40 : 20}>
         {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
       </HStack>
     </AppNavigation>

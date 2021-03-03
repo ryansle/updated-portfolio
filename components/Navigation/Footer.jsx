@@ -20,12 +20,12 @@ import {
 // import { v4 as uuid } from "uuid";
 
 const Footer = () => {
-  const [phoneScreen] = useMediaQuery("(max-width: 1200px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <Box>
       {/* <Flex justify="space-between">
-        <Box width={phoneScreen ? "100%" : "30%"}>
+        <Box width={tabletScreen ? "100%" : "30%"}>
           <Heading size="md" mb={5}>My name is Ryan Le.</Heading>
           <Text fontSize="md">
             I currently work as a Software Engineer Intern at Nelnet. My passion is in
@@ -33,7 +33,7 @@ const Footer = () => {
           </Text>
         </Box>
         <Box 
-          width={phoneScreen ? "100%" : "20%"} 
+          width={tabletScreen ? "100%" : "20%"} 
         >
           <Heading size="md" mb={5}>Learn about me &amp; my work</Heading>
           <Stack>
@@ -43,7 +43,7 @@ const Footer = () => {
             <Link href="/about" color="#3492D0">Projects</Link>
           </Stack>
         </Box>
-        <Box width={phoneScreen ? "100%" : "30%"}>
+        <Box width={tabletScreen ? "100%" : "30%"}>
           <Heading size="md" mb={5}>Connect with me</Heading>
           <Text fontSize="md" mb={5}>
             Follow me on Instagram, start a conversation with me,
@@ -58,7 +58,7 @@ const Footer = () => {
         <Text fontSize="md" mb={3}>
           Copyright &copy; {new Date().getFullYear()} Ryan Le. All Rights Reserved.
         </Text>
-        {!phoneScreen && (
+        {!tabletScreen && (
           <Text fontSize="md" mb={3}>
             Portfolio created with <Link href="https://chakra-ui.com/" color="teal.500">Chakra UI</Link> components.
           </Text>

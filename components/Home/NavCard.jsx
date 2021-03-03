@@ -22,8 +22,8 @@ import {
 
 const NavCard = ({ image, icon, title, description, link, linkText }) => {
   // Responsive hooks
-  const [tabletScreen] = useMediaQuery("(max-width: 1340px)");
-  const [phoneScreen] = useMediaQuery("(max-width: 985px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
+  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   const renderIcon = (icon) => {
     switch (icon) {
@@ -48,7 +48,7 @@ const NavCard = ({ image, icon, title, description, link, linkText }) => {
     <Box
       borderWidth="1px"
       borderRadius="lg"
-      mx={4}
+      mx={phoneScreen ? 0 : 4}
       mb={8}
       width={phoneScreen ? "100%" : tabletScreen ? "45%" : "30%"}
     >

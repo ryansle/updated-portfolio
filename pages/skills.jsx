@@ -16,13 +16,13 @@ import SkillTable from "../components/Skills/SkillTable";
 import { webdev, mobiledev, languages, other } from "../content/skills";
 
 const Skills = () => {
-  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={10}>My Skillsets</Heading>
       <Flex justify="space-between" align="flex-start" wrap="wrap">
-        <Box width={phoneScreen ? "100%" : "54%"}>
+        <Box width={tabletScreen ? "100%" : "54%"}>
           <Heading size="lg" mb={5}>Web Development</Heading>
           <Text fontSize="xl" mb={5}>
             Primarily, my skillsets are in builing web applications - specifically the front-ends. 
@@ -44,7 +44,7 @@ const Skills = () => {
             </Text>
           </Box>
         </Box>
-        <Box width={phoneScreen ? "100%" : "40%"} mb={phoneScreen ? 10 : 0}>
+        <Box width={tabletScreen ? "100%" : "40%"} mb={tabletScreen ? 10 : 0}>
           <Legend />
         </Box>
       </Flex>

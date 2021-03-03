@@ -13,12 +13,12 @@ import {
 import { LinkIcon as Link } from "@chakra-ui/icons";
 
 const Credit = ({ person }) => {
-  const [phoneScreen] = useMediaQuery("(max-width: 1300px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <Box mb={15}>
       <Flex justify="space-between" align="center" wrap="wrap-reverse">
-        <Box width={phoneScreen ? "100%" : "50%"}>
+        <Box width={tabletScren ? "100%" : "50%"}>
           <Heading size="xl">{person.name}</Heading>
           <Heading size="md" mb={1}>
             {person.role}
@@ -41,9 +41,9 @@ const Credit = ({ person }) => {
           <Text fontSize="xl" mt={5}>{person.description}</Text>
         </Box>
         <Box 
-          width={phoneScreen ? "100%" : "30%"} 
+          width={tabletScreen ? "100%" : "30%"} 
           align="center"
-          mb={phoneScreen ? 5 : 0}
+          mb={tabletScreen ? 5 : 0}
         >
           <Image
             src={person.image}

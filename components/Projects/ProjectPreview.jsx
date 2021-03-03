@@ -21,8 +21,8 @@ const ProjectPreview = ({
   description,
   stack,
 }) => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1300px)");
-  const [phoneScreen] = useMediaQuery("(max-width: 640px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
+  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   return (
     <Box

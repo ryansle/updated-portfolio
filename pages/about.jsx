@@ -29,13 +29,13 @@ import { accomplishments } from "../content/accomplishments";
 
 const About = () => {
   // Responsive hooks
-  const [phoneScreen] = useMediaQuery("(max-width: 985px)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={10}>About Me</Heading>
       <Flex justify="space-between" align="flex-start" mb={20} flexWrap="wrap-reverse">
-        <Box width={phoneScreen ? "100%" : "50%"}>
+        <Box width={tabletScreen ? "100%" : "50%"}>
           <Text fontSize="xl" mb={5}>
             Hey there, my name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
           </Text>
@@ -54,7 +54,7 @@ const About = () => {
             {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
           </HStack>
         </Box>
-        <Box width={phoneScreen ? "100%" : "40%"} align="center">
+        <Box width={tabletScreen ? "100%" : "40%"} align="center">
           <Image 
             src="./about/idaho.JPG" 
             width={500} 
@@ -66,7 +66,7 @@ const About = () => {
             color="gray" 
             mt={5} 
             align="center"
-            mb={phoneScreen ? 5 : 0}
+            mb={tabletScreen ? 5 : 0}
           >
             Sandpoint, Idaho, March 2020
           </Text>
@@ -79,17 +79,17 @@ const About = () => {
         justify="space-between" 
         align="center" 
         mt={20} 
-        mb={phoneScreen ? 40 : 20} 
+        mb={tabletScreen ? 40 : 20} 
         flexWrap="wrap"
       >
-        <Box width={phoneScreen ? "100%" : "30%"} align="center">
+        <Box width={tabletScreen ? "100%" : "30%"} align="center">
           <Image 
             src="./about/nebraska.svg" 
-            width={phoneScreen ? "50%" : "80%"} 
-            mb={phoneScreen ? 10 : 0}
+            width={tabletScreen ? "50%" : "80%"} 
+            mb={tabletScreen ? 10 : 0}
           />
         </Box>
-        <Box width={phoneScreen ? "100%" : "60%"}>
+        <Box width={tabletScreen ? "100%" : "60%"}>
           <Heading size="2xl" mb={5}>Education</Heading>
           <Heading size="lg" mb={2} >University of Nebraska-Lincoln</Heading>
           <Text fontSize="xl">Bachelor of Science in <b>Software Engineering</b>; Minor in <b>Mathematics</b></Text>
