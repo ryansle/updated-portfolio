@@ -4,7 +4,7 @@ import React from "react";
 import { Box, useColorMode, } from "@chakra-ui/react";
 import SideNav from "./SideNav";
 import Header from "./Header";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 const AppNavigation = ({ children, ...rest }) => {
   const { colorMode } = useColorMode();
@@ -27,13 +27,15 @@ const AppNavigation = ({ children, ...rest }) => {
               {children}
             </Box>
             {/* <Box 
-              px={phoneScreen ? "10%" : "2%"} 
+              // px={phoneScreen ? "10%" : "2%"} 
+              px={["10%", null, "2%"]}
               borderTop="1px"
               borderColor="gray.600" 
               py={5}
               backgroundColor={colorMode === "light" ? "white" : "gray.800"}
               pos="absolute"
-              maxWidth={phoneScreen ? "100%" : "calc(100vw - 18rem)"}
+              // maxWidth={phoneScreen ? "100%" : "calc(100vw - 18rem)"}
+              maxWidth={["100%", null, "calc(100vw - 18rem)"]}
               as="footer"
               bottom="0"
               mt={10}

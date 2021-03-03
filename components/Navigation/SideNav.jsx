@@ -98,6 +98,7 @@ const PageLinks = () => (
     <SideNavLink href="/credits" icon={Credits}>
       Credits
     </SideNavLink>
+  <br /> <br /> <br />
   </Stack>
 );
 
@@ -120,6 +121,7 @@ const SideNav = (props) => {
         position="relative"
         overflowY="auto"
         borderRightWidth="1px"
+        mb={6}
       >
         <Box>
           <Flex
