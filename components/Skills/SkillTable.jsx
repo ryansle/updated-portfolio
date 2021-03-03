@@ -16,7 +16,6 @@ import Skill from "./Skill";
 import { v4 as uuid } from "uuid";
 
 const SkillTable = ({ caption, skills }) => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
   const [phoneScreen] = useMediaQuery("(max-width: 600px)");
 
   return (
@@ -26,10 +25,9 @@ const SkillTable = ({ caption, skills }) => {
       </TableCaption>
       <Thead>
         <Tr>
-          {caption && <Th>Language/Framework</Th>}
-          {!caption && <Th>Skill</Th>}
-          <Th>Experiences</Th>
-          {caption && <Th>Confidence</Th>}
+          <Th>Language/Framework</Th>
+          {!phoneScreen && <Th>Experiences</Th>}
+          <Th>Confidence</Th>
         </Tr>
       </Thead>
       <Tbody>

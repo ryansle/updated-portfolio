@@ -18,7 +18,7 @@ const Credit = ({ person }) => {
   return (
     <Box mb={15}>
       <Flex justify="space-between" align="center" wrap="wrap-reverse">
-        <Box width={tabletScren ? "100%" : "50%"}>
+        <Box width={tabletScreen ? "100%" : "50%"}>
           <Heading size="xl">{person.name}</Heading>
           <Heading size="md" mb={1}>
             {person.role}

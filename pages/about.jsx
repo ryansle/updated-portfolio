@@ -28,13 +28,17 @@ import { socials } from "../content/social-media";
 import { accomplishments } from "../content/accomplishments";
 
 const About = () => {
-  // Responsive hooks
   const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
       <Heading size="2xl" mb={10}>About Me</Heading>
-      <Flex justify="space-between" align="flex-start" mb={20} flexWrap="wrap-reverse">
+      <Flex 
+        justify="space-between" 
+        align="flex-start" 
+        mb={20} 
+        flexWrap="wrap-reverse"
+      >
         <Box width={tabletScreen ? "100%" : "50%"}>
           <Text fontSize="xl" mb={5}>
             Hey there, my name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.

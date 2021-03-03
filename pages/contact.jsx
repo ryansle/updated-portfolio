@@ -1,7 +1,14 @@
 import React from "react";
 
 // Components
-import { Heading, Flex, HStack, Box, Text, useMediaQuery } from "@chakra-ui/react";
+import { 
+  Heading, 
+  Flex, 
+  HStack, 
+  Box, 
+  Text, 
+  useMediaQuery 
+} from "@chakra-ui/react";
 import AppNavigation from "../components/Navigation/AppNavigation";
 import ContactForm from "../components/Contact/ContactForm";
 import SocialMedia from "../components/SocialMedia";
@@ -13,12 +20,17 @@ import { socials } from "../content/social-media";
 import { v4 as uuid } from "uuid";
 
 const Contact = () => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400)");
+  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
 
   return (
     <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Heading size="2xl">Let's Talk!</Heading>
-      <Flex justify="space-between" mb={20} wrap="wrap-reverse">
+      <Heading size="2xl" mb={5}>Let's Talk!</Heading>
+      <Flex 
+        justify="space-between" 
+        mb={20} 
+        wrap="wrap-reverse" 
+        align="center"
+      >
         <Box width={tabletScreen ? "100%" : "45%"}>
           <ContactForm />
         </Box>

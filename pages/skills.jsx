@@ -41,6 +41,7 @@ const Skills = () => {
           >
             <Text fontSize="lg">
               Note: Experiences are truncated to <b>latest three</b> experiences in order to improve readability.
+              It has also been hidden from mobile devices, as the tables can't expand large enough.
             </Text>
           </Box>
         </Box>

@@ -1,10 +1,12 @@
 import React from "react";
 
 // Components
-import { Tr, Td, Text } from "@chakra-ui/react";
+import { Tr, Td, Text, useMediaQuery } from "@chakra-ui/react";
 import { StarIcon as Star } from "@chakra-ui/icons";
 
 const LegendCell = ({ amount }) => {
+  const [phoneScreen] = useMediaQuery("(max-width: 600px)")
+
   const renderText = (amount) => {
     switch (amount) {
       case 5:
@@ -32,7 +34,7 @@ const LegendCell = ({ amount }) => {
               <Star 
                 key={i} 
                 color={i < amount ? "teal.500" : "gray.300"}
-                mr={1}
+                mr={phoneScreen ? 0 : 1}
               />
             ))
         }
