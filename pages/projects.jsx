@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import { Heading, Box, Divider } from "@chakra-ui/react";
-import AppNavigation from "../components/Navigation/AppNavigation";
-import ProjectGroup from "../components/Projects/ProjectGroup";
+import { Heading, Box, Divider } from '@chakra-ui/react';
+import AppNavigation from '../components/Navigation/AppNavigation';
+import ProjectGroup from '../components/Projects/ProjectGroup';
 
 // Utilities
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 
 // Content
-import { projects } from "../content/projects/projects";
+import { projects } from '../content/projects/projects';
 
 const Projects = () => {
   return (
-    <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Heading size="2xl">Projects</Heading>
+    <AppNavigation width='full' maxWidth='1280px' mx='auto'>
+      <Heading size='2xl'>Projects</Heading>
       {projects.map((group, index) => (
         <Box>
           <ProjectGroup

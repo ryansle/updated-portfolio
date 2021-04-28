@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
 // Components
-import { Heading, Divider, Box } from "@chakra-ui/react";
-import AppNavigation from "../components/Navigation/AppNavigation";
-import WorkExperience from "../components/Experience/WorkExperience";
+import { Heading, Divider, Box } from '@chakra-ui/react';
+import AppNavigation from '../components/Navigation/AppNavigation';
+import WorkExperience from '../components/Experience/WorkExperience';
 
 // Content
-import { experienceContent } from "../content/experience";
+import { experienceContent } from '../content/experience';
 
 // Utilities
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 
 const Experience = () => {
   return (
-    <AppNavigation width="full" maxWidth="1280px" mx="auto">
-      <Heading size="2xl">Work Experience</Heading>
+    <AppNavigation width='full' maxWidth='1280px' mx='auto'>
+      <Heading size='2xl'>Work Experience</Heading>
       {
         experienceContent.map((experience, index) => (
           <Box key={uuid()}>
@@ -32,7 +32,7 @@ const Experience = () => {
             {index !== experienceContent.length - 1 ? (
               <Divider height={10} key={uuid()} />
             ) : (
-              <Box mb="100px" key={uuid()} />
+              <Box mb='100px' key={uuid()} />
             )}
           </Box>
         ))

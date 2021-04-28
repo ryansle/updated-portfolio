@@ -6,20 +6,22 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { DefaultSeo } from "next-seo";
 import seo from "../seo.config";
 import theme from "../theme";
-import "../styles/globals.css";
+import { RecoilRoot } from "recoil";
 
 const Portfolio = ({ Component, pageProps }) => (
-  <ChakraProvider resetCSS theme={theme}>
-    <Global
-      styles={css`
-        #__next {
-          height: 100%;
-        }
-      `}
-    />
-    <DefaultSeo {...seo} />
-    <Component {...pageProps} />
-  </ChakraProvider>
+  <RecoilRoot>
+    <ChakraProvider resetCSS theme={theme}>
+      <Global
+        styles={css`
+          #__next {
+            height: 100%;
+          }
+        `}
+      />
+      <DefaultSeo {...seo} />
+      <Component {...pageProps} />
+    </ChakraProvider>
+  </RecoilRoot>
 );
 
 export default Portfolio;

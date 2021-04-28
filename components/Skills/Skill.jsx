@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Components
 import {
@@ -8,26 +8,26 @@ import {
   Image,
   Text,
   useMediaQuery
-} from "@chakra-ui/react";
-import { StarIcon as Star } from "@chakra-ui/icons";
+} from '@chakra-ui/react';
+import { StarIcon as Star } from '@chakra-ui/icons';
 
 const Skill = ({ icon, radii, name, experience, rating }) => {
-  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
+  const [phoneScreen] = useMediaQuery('(max-width: 600px)');
 
   return (
     <Tr>
       <Td>
-        <Flex align="center">
+        <Flex align='center'>
           {icon && (
             <Image 
               src={icon}
-              width="35px" 
-              height="35px" 
+              width='35px' 
+              height='35px' 
               mr={3}
-              borderRadius={radii ? "full": "none"}
+              borderRadius={radii ? 'full': 'none'}
             />
           )}
-          <Text fontWeight="bold" fontSize="lg">
+          <Text fontWeight='bold' fontSize='lg'>
             {name}
           </Text>
         </Flex>
@@ -35,7 +35,7 @@ const Skill = ({ icon, radii, name, experience, rating }) => {
       {
         !phoneScreen && (
           <Td>
-            <Text fontSize="md">
+            <Text fontSize='md'>
               {experience}
             </Text>
           </Td>
@@ -45,11 +45,11 @@ const Skill = ({ icon, radii, name, experience, rating }) => {
         icon && <Td>
           {
             Array(5)
-              .fill("")
+              .fill('')
               .map((_, i) => (
                 <Star 
                   key={i} 
-                  color={i < rating ? "teal.500" : "gray.300"} 
+                  color={i < rating ? 'teal.500' : 'gray.300'} 
                   mr={[0, null, null, 1]}
                 />
               ))

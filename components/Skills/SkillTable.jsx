@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Components
 import {
@@ -9,17 +9,17 @@ import {
   Th,
   TableCaption,
   useMediaQuery,
-} from "@chakra-ui/react";
-import Skill from "./Skill";
+} from '@chakra-ui/react';
+import Skill from './Skill';
 
 // Utilities
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 
 const SkillTable = ({ caption, skills }) => {
-  const [phoneScreen] = useMediaQuery("(max-width: 600px)");
+  const [phoneScreen] = useMediaQuery('(max-width: 600px)');
 
   return (
-    <Table variant="simple" size={caption ? "sm" : "md"} mb={20}>
+    <Table variant='simple' size={caption ? 'sm' : 'md'} mb={20}>
       <TableCaption>
         {caption}
       </TableCaption>
