@@ -4,6 +4,7 @@ import React from 'react';
 import { Heading, Box, Image, Text, Wrap } from '@chakra-ui/react';
 import AppNavigation from '../components/Navigation/AppNavigation';
 import NavCard from '../components/Home/NavCard';
+import Head from 'next/head';
 
 // Utilities
 import { nav } from '../content/navigation-cards';
@@ -12,6 +13,15 @@ import { v4 as uuid } from 'uuid';
 const Home = () => {
   return (
     <AppNavigation width='full' maxWidth='1280px' mx='auto'>
+      <Head>
+        <title>Ryan Le's Personal Portfolio</title>
+        <meta
+          name='description'
+          content='Looking to fill a role on your software development team? Look no further - learn why you consider hiring me, Ryan Le.'
+        />
+        <meta property='og:image' content='./preview.jpeg' />
+      </Head>
+
       <Image src='./banner.png' borderRadius={20} mb={10} boxShadow='lg' />
       <Heading size='2xl'>Ryan Le</Heading>
       <Heading size='lg' mt='10px'>Software Engineer. Front-End Web Developer.</Heading>

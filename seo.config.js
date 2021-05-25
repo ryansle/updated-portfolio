@@ -7,7 +7,7 @@ const SEO = {
     description: "Learn why you should consider me for your front-end development roles.",
     images: [
       {
-        url: "",
+        url: "./preview.jpeg",
         width: 1200,
         height: 630,
         alt: "Ryan Le's Personal Portfolio",

@@ -38,11 +38,11 @@ const About = () => {
       >
         <Box width={['100%', null, '50%']}>
           <Text fontSize='xl' mb={5}>
-            Hey there, my name is Ryan Le and I am a senior at the University of Nebraska-Lincoln studying Software Engineering.
+            Hey there, my name is Ryan Le and I am a new graduate of the University of Nebraska-Lincoln with a Bachelor of Science degree in Software Engineering.
           </Text>
           <Text fontSize='xl' mb={5}>
-            I am an Vietnamese-American front-end developer originally from Sioux Falls, South Dakota, working primarily with
-            JavaScript-based technologies like React.js, Material-UI, and Chakra UI.
+            I am an Vietnamese-American front-end developer originally from Sioux Falls, South Dakota but I'll soon be moving out to New York City. I work primarily with
+            JavaScript-based technologies like React.js, Material-UI, and Chakra UI. 
           </Text>
           <Text fontSize='xl' mb={10}>
             As such, I specialize in web development and enjoy working on projects of all shapes and sizes, ranging from deep within
@@ -95,8 +95,8 @@ const About = () => {
           <Heading size='2xl' mb={5}>Education</Heading>
           <Heading size='lg' mb={2} >University of Nebraska-Lincoln</Heading>
           <Text fontSize='xl'>Bachelor of Science in <b>Software Engineering</b>; Minor in <b>Mathematics</b></Text>
-          <Text fontSize='xl'><b>Cumulative GPA</b>: 3.623/4.000</Text>
-          <Text fontSize='xl' mb={10}><b>Expected Graduation Date</b>: May 8th, 2021 <Icon as={Grad} /></Text>
+          <Text fontSize='xl'><b>Cumulative GPA</b>: 3.636/4.000</Text>
+          <Text fontSize='xl' mb={10}><b>Graduation Date</b>: May 8th, 2021 <Icon as={Grad} /></Text>
           
           <Heading size='lg' mb={5}>Accomplishments</Heading>
           <List spacing={3}>

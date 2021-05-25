@@ -3,7 +3,7 @@ import React from "react";
 // Components
 import { Box, Flex, IconButton, useColorMode, Text } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
-import MobileNav from "./MobileNav";
+import MobileSidebar from "./MobileSidebar";
 
 // Utilities
 import Link from "next/link";
@@ -57,7 +57,7 @@ const Header = (props) => {
               icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             />
 
-            {!hideSearch && <MobileNav />}
+            {!hideSearch && <MobileSidebar />}
           </Flex>
         </Flex>
       </Box>

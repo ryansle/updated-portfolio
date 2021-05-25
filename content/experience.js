@@ -1,16 +1,27 @@
 export const experienceContent = [
   {
+    company: "T-Mobile",
+    role: "Product & Technology Software Intern",
+    dateRange: "May 2021 - Now",
+    description: "Working with legacy Sprint teams to streamline development processes, create user stories, and take ownership of a product that aims to merge T-Mobile and Sprint customer operations.",
+    subtitle: "Primary Responsibilities",
+    bullets: [
+      "To be determined..."
+    ],
+    imagePath: "./experience/tmobile.svg",
+  },
+  {
     company: "Nelnet",
     role: "Software Engineer Intern",
-    dateRange: "June 2020 - Present",
+    dateRange: "June 2020 - May 2021",
     description:
-      "Currently participating in a fully remote internship in a primary role as a Front-End Developer on Nelnet's Campus Key team.",
+      "Participated in a fully remote internship in a primary role as a Front-End Developer on Nelnet's Campus Key team.",
     subtitle: "Things I've Done",
     bullets: [
-      "Redevelop the front-end for the Cardholder Portal application using React.js",
-      "Leverage Material-UI for faster and easier web development",
-      "Develop dynamically scalable iOS applications with Swift, UIKit, and the serverless framework",
-      "Design and develop rich, interactive user experiences utilizing the power of UIKit",
+      "Redeveloped the front-end for the Cardholder Portal application using React.js",
+      "Leveraged Material-UI for faster and easier web development",
+      "Developed dynamically scalable iOS applications with Swift, UIKit, and the serverless framework",
+      "Designed and developed rich, interactive user experiences utilizing the power of UIKit",
     ],
     stack: [
       "React.js",

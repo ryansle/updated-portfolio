@@ -48,7 +48,7 @@ const WorkExperience = ({
             {subtitle}
           </Heading>
           <List spacing={3} mb={5}>
-            {bullets.map((bullet) => (
+            {bullets?.map((bullet) => (
               <ListItem key={uuid()}>
                 <ListIcon as={Gear} color='teal.500' />
                 {bullet}
@@ -58,7 +58,7 @@ const WorkExperience = ({
 
           <HStack justify='space-between' alignItems='flex-end'>
             <Box width='100%'>
-              {stack.map((tech) => (
+              {stack?.map((tech) => (
                 <Tag
                   key={uuid()}
                   size='lg'
