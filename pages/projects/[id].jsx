@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Components
 import {
   Breadcrumb,
@@ -15,11 +13,11 @@ import {
   Tag,
   useMediaQuery,
 } from '@chakra-ui/react';
-import { 
-  ChevronRightIcon as ChevronRight, 
-  LinkIcon as Chain, 
+import {
+  ChevronRightIcon as ChevronRight,
+  LinkIcon as Chain,
 } from '@chakra-ui/icons';
-import { AiFillGithub as GitHub } from 'react-icons/ai'
+import { AiFillGithub as GitHub } from 'react-icons/ai';
 import AppNavigation from '../../components/Navigation/AppNavigation';
 
 // Content
@@ -27,9 +25,9 @@ import projectDetails from '../../content/projects/project-details.json';
 import ProjectDetailsContent from '../../content/projects/ProjectDetailsContent';
 
 // Utilities
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from 'uuid'; // eslint-disable-line
 
-const ProjectPage = (props) => {
+const ProjectPage = ({ details }) => {
   const [phoneScreen] = useMediaQuery('(max-width: 600px)');
 
   return (
@@ -46,42 +44,46 @@ const ProjectPage = (props) => {
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <BreadcrumbLink href='#'>{props.details.title}</BreadcrumbLink>
+            <BreadcrumbLink href='#'>{details.title}</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
 
         <Flex justify='space-between' align='center' wrap='wrap'>
           <Box width={['100%', null, '60%']} mb={[5, null, 0]}>
             <Heading size={phoneScreen ? 'lg' : '2xl'} mb={2}>
-              {props.details.title}
+              {details.title}
             </Heading>
             {
-              props.details.link !== '' && (
+              details.link !== '' && (
                 <Text color='#3492D0' fontSize={['xs', 'sm', null, 'lg']}>
-                  <Chain />:{' '}
-                  <Link href={props.details.link}>
-                    {props.details.link}
-                  </Link> 
+                  <Chain />
+                  :
+                  {' '}
+                  <Link href={details.link}>
+                    {details.link}
+                  </Link>
                 </Text>
               )
             }
             {
-              props.details.github !== '' && (
+              details.github !== '' && (
                 <Text color='#3492D0' fontSize={['xs', 'sm', null, 'lg']}>
-                  <Icon as={GitHub} />:{' '} 
-                  <Link>
-                    {props.details.github}
+                  <Icon as={GitHub} />
+                  :
+                  {' '}
+                  <Link href={details.github}>
+                    {details.github}
                   </Link>
                 </Text>
               )
             }
           </Box>
-          <Wrap 
+          <Wrap
             width={['100%', null, '40%']}
             justify={['flex-start', null, 'flex-end']}
           >
             {
-              props.details.stack.map((tech) => (
+              details.stack.map((tech) => (
                 <Tag
                   key={uuid()}
                   size={phoneScreen ? 'sm' : 'lg'}
@@ -96,16 +98,14 @@ const ProjectPage = (props) => {
           </Wrap>
         </Flex>
 
-        <ProjectDetailsContent project={props.details.title} />
+        <ProjectDetailsContent project={details.title} />
       </Box>
     </AppNavigation>
   );
 };
 
-ProjectPage.getInitialProps = ({ query }) => {
-  return {
-    details: projectDetails[query.id],
-  };
-};
+ProjectPage.getInitialProps = ({ query }) => ({
+  details: projectDetails[query.id],
+});
 
 export default ProjectPage;

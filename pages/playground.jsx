@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 // Components
-import { 
-  Heading, 
-  Text, 
+import {
+  Heading,
+  Text,
   Divider,
   Box,
   Button,
@@ -55,12 +55,12 @@ const About = () => {
         A component to open up a modal display and allow a user to perform some sort of action
         that does not warrant its own page route.
       </Text>
-      <Button colorScheme='teal' onClick={onOpen} mb={10} >
+      <Button colorScheme='teal' onClick={onOpen} mb={10}>
         Open DialogDisplay
       </Button>
       <Divider />
 
-      <DialogDisplay 
+      <DialogDisplay
         isOpen={isOpen}
         onClose={onClose}
         title='Dialog Example'

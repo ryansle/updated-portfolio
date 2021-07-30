@@ -1,14 +1,12 @@
-import React from 'react';
-
 // Components
-import { 
-  Heading, 
-  Box, 
-  Text, 
+import {
+  Heading,
+  Box,
+  Text,
   Center,
-  Button, 
+  Button,
   Link,
-  useMediaQuery 
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { DownloadIcon as Download } from '@chakra-ui/icons';
 import AppNavigation from '../components/Navigation/AppNavigation';
@@ -30,9 +28,9 @@ const Resume = () => {
           <Center>
             {phoneScreen && (
               <Link href='./resume.pdf' width='full' download>
-                <Button 
+                <Button
                   leftIcon={<Download />}
-                  width='full' 
+                  width='full'
                   colorScheme='teal'
                 >
                   Download Resume
@@ -40,12 +38,12 @@ const Resume = () => {
               </Link>
             )}
             {!phoneScreen && (
-              <iframe 
-                src='./resume.pdf' 
+              <iframe
+                src='./resume.pdf'
                 width='90%'
                 height='800px'
                 title='My Resume'
-                allowFullScreen='' 
+                allowFullScreen=''
                 frameBorder='0'
               />
             )}

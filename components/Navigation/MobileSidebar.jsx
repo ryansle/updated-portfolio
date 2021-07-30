@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 // Components
 import {
@@ -13,15 +13,14 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import Sidebar from './Sidebar';
 
 // Utilities
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'; // eslint-disable-line
 
 const useRouteChanged = (callback) => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = () => {
       callback();
-      console.log('App is changing to: ', url);
     };
 
     router.events.on('routeChangeComplete', handleRouteChange);

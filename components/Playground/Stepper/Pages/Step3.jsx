@@ -1,7 +1,7 @@
 // Components
-import { 
-  Box, 
-  Heading, 
+import {
+  Box,
+  Heading,
   Flex,
   FormControl,
   FormLabel,
@@ -10,12 +10,12 @@ import {
   PinInputField,
   FormHelperText,
   UnorderedList,
-  ListItem
+  ListItem,
 } from '@chakra-ui/react';
 
 // Utilities
-import { fields as fieldsState } from '../../../../utils/atoms';
 import { useRecoilState } from 'recoil';
+import { fields as fieldsState } from '../../../../utils/atoms';
 
 const Step3 = () => {
   const [fields, setFields] = useRecoilState(fieldsState);
@@ -23,7 +23,7 @@ const Step3 = () => {
   const updateFields = (e) => {
     setFields((details) => ({
       ...details,
-      ['pin']: e,
+      pin: e,
     }));
   };
 
@@ -35,7 +35,7 @@ const Step3 = () => {
           <FormControl id='pin' mb={5} isRequired>
             <FormLabel>Set A Pin</FormLabel>
             <HStack>
-              <PinInput 
+              <PinInput
                 name='pin'
                 value={fields.pin}
                 onChange={updateFields}
@@ -61,7 +61,7 @@ const Step3 = () => {
         </Box>
       </Flex>
     </Box>
-  )
+  );
 };
 
 export default Step3;

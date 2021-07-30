@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Components
 import {
   Table,
@@ -13,7 +11,7 @@ import {
 import Skill from './Skill';
 
 // Utilities
-import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from 'uuid'; // eslint-disable-line
 
 const SkillTable = ({ caption, skills }) => {
   const [phoneScreen] = useMediaQuery('(max-width: 600px)');

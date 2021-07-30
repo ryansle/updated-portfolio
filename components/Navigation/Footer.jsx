@@ -1,5 +1,3 @@
-import React from "react";
-
 // Components
 import {
   Box,
@@ -7,20 +5,28 @@ import {
   Text,
   Link,
   useMediaQuery,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
 const Footer = () => {
-  const [tabletScreen] = useMediaQuery("(max-width: 1400px)");
+  const [tabletScreen] = useMediaQuery('(max-width: 1400px)');
 
   return (
     <Box>
-      <Flex justify="space-between" wrap="wrap">
-        <Text fontSize="md" mb={3}>
-          Copyright &copy; {new Date().getFullYear()} Ryan Le. All Rights Reserved.
+      <Flex justify='space-between' wrap='wrap'>
+        <Text fontSize='md' mb={3}>
+          Copyright &copy;
+          {' '}
+          {new Date().getFullYear()}
+          {' '}
+          Ryan Le. All Rights Reserved.
         </Text>
         {!tabletScreen && (
-          <Text fontSize="md" mb={3}>
-            Portfolio created with <Link href="https://chakra-ui.com/" color="teal.500">Chakra UI</Link> components.
+          <Text fontSize='md' mb={3}>
+            Portfolio created with
+            {' '}
+            <Link href='https://chakra-ui.com/' color='teal.500'>Chakra UI</Link>
+            {' '}
+            components.
           </Text>
         )}
       </Flex>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Components
 import {
   Tr,
@@ -7,11 +5,20 @@ import {
   Flex,
   Image,
   Text,
-  useMediaQuery
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { StarIcon as Star } from '@chakra-ui/icons';
 
-const Skill = ({ icon, radii, name, experience, rating }) => {
+// Utilities
+import { v4 as uuid } from 'uuid';
+
+const Skill = ({
+  icon,
+  radii,
+  name,
+  experience,
+  rating,
+}) => {
   const [phoneScreen] = useMediaQuery('(max-width: 600px)');
 
   return (
@@ -19,12 +26,12 @@ const Skill = ({ icon, radii, name, experience, rating }) => {
       <Td>
         <Flex align='center'>
           {icon && (
-            <Image 
+            <Image
               src={icon}
-              width='35px' 
-              height='35px' 
+              width='35px'
+              height='35px'
               mr={3}
-              borderRadius={radii ? 'full': 'none'}
+              borderRadius={radii ? 'full' : 'none'}
             />
           )}
           <Text fontWeight='bold' fontSize='lg'>
@@ -42,22 +49,24 @@ const Skill = ({ icon, radii, name, experience, rating }) => {
         )
       }
       {
-        icon && <Td>
-          {
-            Array(5)
-              .fill('')
-              .map((_, i) => (
-                <Star 
-                  key={i} 
-                  color={i < rating ? 'teal.500' : 'gray.300'} 
-                  mr={[0, null, null, 1]}
-                />
-              ))
-          }
-        </Td>
+        icon && (
+          <Td>
+            {
+              Array(5)
+                .fill('')
+                .map((_, i) => (
+                  <Star
+                    key={uuid()}
+                    color={i < rating ? 'teal.500' : 'gray.300'}
+                    mr={[0, null, null, 1]}
+                  />
+                ))
+            }
+          </Td>
+        )
       }
     </Tr>
-  );  
+  );
 };
 
 export default Skill;

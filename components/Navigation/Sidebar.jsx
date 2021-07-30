@@ -11,7 +11,7 @@ import {
   Image,
   Heading,
 } from '@chakra-ui/react';
-import { ComponentLink } from './NavLink';
+import { ComponentLink } from './NavLink'; // eslint-disable-line
 
 // Icons
 import {
@@ -96,7 +96,11 @@ const PageLinks = () => (
     <SideNavLink href='/credits' icon={Credits}>
       Credits
     </SideNavLink>
-  <br /> <br /> <br />
+    <br />
+    {' '}
+    <br />
+    {' '}
+    <br />
   </Stack>
 );
 

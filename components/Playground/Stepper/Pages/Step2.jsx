@@ -1,7 +1,7 @@
 // Components
-import { 
-  Box, 
-  Heading, 
+import {
+  Box,
+  Heading,
   FormControl,
   FormLabel,
   Select,
@@ -9,8 +9,8 @@ import {
 } from '@chakra-ui/react';
 
 // Utilities
-import { fields as fieldsState } from '../../../../utils/atoms';
 import { useRecoilState } from 'recoil';
+import { fields as fieldsState } from '../../../../utils/atoms';
 
 const Step2 = () => {
   const colors = ['Red', 'Blue', 'Green', 'Yellow'];
@@ -30,8 +30,8 @@ const Step2 = () => {
       <Heading mb={5}>Step 2</Heading>
       <FormControl id='favoriteColor' mb={5} isRequired>
         <FormLabel>Favorite Color</FormLabel>
-        <Select 
-          name='favoriteColor' 
+        <Select
+          name='favoriteColor'
           placeholder='Select option'
           value={fields.favoriteColor}
           onChange={updateFields}
@@ -44,15 +44,15 @@ const Step2 = () => {
 
       <FormControl id='whyFavorite' mb={5} isRequired>
         <FormLabel>Why is this your favorite color?</FormLabel>
-        <Textarea 
-          name='whyFavorite' 
-          placeholder='Select option' 
+        <Textarea
+          name='whyFavorite'
+          placeholder='Select option'
           value={fields.whyFavorite}
           onChange={updateFields}
         />
       </FormControl>
     </Box>
-  )
+  );
 };
 
 export default Step2;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 
 // Components
 import {
@@ -12,19 +12,19 @@ import {
   Button,
   useToast,
   useColorMode,
-} from "@chakra-ui/react";
-import { AiOutlineClear as Clear } from "react-icons/ai";
-import { BiMailSend as Send } from "react-icons/bi";
+} from '@chakra-ui/react';
+import { AiOutlineClear as Clear } from 'react-icons/ai';
+import { BiMailSend as Send } from 'react-icons/bi';
 
 // Utilities
-import { validateEmail } from "../../utils/validate-data";
-import emailjs from "emailjs-com";
+import emailjs from 'emailjs-com';
+import { validateEmail } from '../../utils/validate-data';
 
 const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
   const [validEmail, setValidEmail] = useState(true);
   const [loadingSend, setLoadingSend] = useState(false);
 
@@ -37,23 +37,21 @@ const ContactForm = () => {
   const updateMessage = (e) => setMessage(e.target.value);
 
   const clearForm = () => {
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
   };
 
   const validateEmailOnBlur = (e) => {
-    const email = e.target.value;
+    const targetEmail = e.target.value;
 
-    if (email === "") {
+    if (targetEmail === '') {
+      setValidEmail(true);
+    } else if (validateEmail(targetEmail)) {
       setValidEmail(true);
     } else {
-      if (validateEmail(email)) {
-        setValidEmail(true);
-      } else {
-        setValidEmail(false);
-      }
+      setValidEmail(false);
     }
   };
 
@@ -61,20 +59,20 @@ const ContactForm = () => {
     setLoadingSend(true);
     setTimeout(() => {
       const params = {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message,
+        name,
+        email,
+        subject,
+        message,
       };
 
-      const templateId = "template_kc7wVwGF";
-      const userId = "user_VSAtF1KGalm3o5auz1ofo";
-      emailjs.send("gmail", templateId, params, userId);
+      const templateId = 'template_kc7wVwGF';
+      const userId = 'user_VSAtF1KGalm3o5auz1ofo';
+      emailjs.send('gmail', templateId, params, userId);
       setLoadingSend(false);
       toast({
-        title: "Email Sent!",
-        description: "Expect an email back from me at ryanle@live.com soon!",
-        status: "success",
+        title: 'Email Sent!',
+        description: 'Expect an email back from me at ryanle@live.com soon!',
+        status: 'success',
         duration: 5000,
         isClosable: true,
       });
@@ -86,25 +84,25 @@ const ContactForm = () => {
   return (
     <Box mt={10}>
       <Box>
-        <FormControl id="contact" isRequired>
+        <FormControl id='contact' isRequired>
           <FormLabel>Name</FormLabel>
           <Input
-            placeholder="Whom am I speaking to?"
+            placeholder='Whom am I speaking to?'
             onChange={updateName}
             value={name}
             mb={5}
-            backgroundColor={colorMode === "light" ? "white" : ""}
+            backgroundColor={colorMode === 'light' ? 'white' : ''}
           />
           <FormLabel>Email Address</FormLabel>
           <Input
-            placeholder="Where should I reply to?"
+            placeholder='Where should I reply to?'
             onChange={updateEmail}
             onBlur={validateEmailOnBlur}
             isInvalid={!validEmail}
-            errorBorderColor="crimson"
+            errorBorderColor='crimson'
             value={email}
             mb={validEmail ? 5 : 0}
-            backgroundColor={colorMode === "light" ? "white" : ""}
+            backgroundColor={colorMode === 'light' ? 'white' : ''}
 
           />
           {!validEmail && (
@@ -116,38 +114,38 @@ const ContactForm = () => {
             onChange={updateSubject}
             value={subject}
             mb={5}
-            backgroundColor={colorMode === "light" ? "white" : ""}
+            backgroundColor={colorMode === 'light' ? 'white' : ''}
 
           />
           <FormLabel>Message</FormLabel>
           <Textarea
-            placeholder="Talk about it!"
-            size="lg"
+            placeholder='Talk about it!'
+            size='lg'
             onChange={updateMessage}
             value={message}
             mb={5}
-            backgroundColor={colorMode === "light" ? "white" : ""}
+            backgroundColor={colorMode === 'light' ? 'white' : ''}
 
           />
         </FormControl>
 
-        <HStack justify="space-between">
-          <Button colorScheme="teal" onClick={clearForm} leftIcon={<Clear />}>
+        <HStack justify='space-between'>
+          <Button colorScheme='teal' onClick={clearForm} leftIcon={<Clear />}>
             Clear Form
           </Button>
           <Button
-            colorScheme="teal"
+            colorScheme='teal'
             isDisabled={
-              name === "" ||
-              email === "" ||
-              subject === "" ||
-              message === "" ||
-              !validEmail
+              name === ''
+              || email === ''
+              || subject === ''
+              || message === ''
+              || !validEmail
             }
             rightIcon={<Send />}
             onClick={sendEmail}
             isLoading={loadingSend}
-            loadingText="Sending..."
+            loadingText='Sending...'
           >
             Send
           </Button>

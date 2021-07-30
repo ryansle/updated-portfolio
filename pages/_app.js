@@ -1,12 +1,10 @@
-import React from "react";
-
 // Utilities
-import { Global, css } from "@emotion/react";
-import { ChakraProvider } from "@chakra-ui/react";
-import { DefaultSeo } from "next-seo";
-import seo from "../seo.config";
-import theme from "../theme";
-import { RecoilRoot } from "recoil";
+import { Global, css } from '@emotion/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { DefaultSeo } from 'next-seo';
+import { RecoilRoot } from 'recoil';
+import seo from '../seo.config';
+import theme from '../theme';
 
 const Portfolio = ({ Component, pageProps }) => (
   <RecoilRoot>

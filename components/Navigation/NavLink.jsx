@@ -26,9 +26,7 @@ const NavLink = ({ children, ...props }) => {
   );
 };
 
-export const stringToUrl = (str, path = '/') => {
-  return `${path}${str.toLowerCase().split(' ').join('-')}`;
-};
+export const stringToUrl = (str, path = '/') => `${path}${str.toLowerCase().split(' ').join('-')}`;
 
 export const SideNavLink = forwardRef(({ children, icon, ...props }, ref) => {
   const { colorMode } = useColorMode();
@@ -56,21 +54,19 @@ export const SideNavLink = forwardRef(({ children, icon, ...props }, ref) => {
   );
 });
 
-export const TopNavLink = forwardRef(({ href, ...props }, ref) => {
-  return (
-    <NavLink href={href}>
-      {(isActive) => (
-        <SideNavLink
-          ref={ref}
-          aria-current={isActive ? 'page' : undefined}
-          _hover={{ color: !isActive ? 'inherit' : null }}
-          {...(isActive && { color: 'teal.500', fontWeight: 'semibold' })}
-          {...props}
-        />
-      )}
-    </NavLink>
-  );
-});
+export const TopNavLink = forwardRef(({ href, ...props }, ref) => (
+  <NavLink href={href}>
+    {(isActive) => (
+      <SideNavLink
+        ref={ref}
+        aria-current={isActive ? 'page' : undefined}
+        _hover={{ color: !isActive ? 'inherit' : null }}
+        {...(isActive && { color: 'teal.500', fontWeight: 'semibold' })}
+        {...props}
+      />
+    )}
+  </NavLink>
+));
 
 export const ComponentLink = forwardRef(({ href, ...props }, ref) => {
   const { colorMode } = useColorMode();

@@ -1,14 +1,12 @@
-import React from 'react';
-
 // Components
-import { Box, useColorMode, } from '@chakra-ui/react';
+import { Box, useColorMode } from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 import Header from './Header';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 const AppNavigation = ({ children, ...rest }) => {
   const { colorMode } = useColorMode();
- 
+
   return (
     <Box>
       <Header />
@@ -26,11 +24,11 @@ const AppNavigation = ({ children, ...rest }) => {
             <Box py='2em' {...rest}>
               {children}
             </Box>
-            {/* <Box 
-              // px={phoneScreen ? '10%' : '2%'} 
+            {/* <Box
+              // px={phoneScreen ? '10%' : '2%'}
               px={['10%', null, '2%']}
               borderTop='1px'
-              borderColor='gray.600' 
+              borderColor='gray.600'
               py={5}
               backgroundColor={colorMode === 'light' ? 'white' : 'gray.800'}
               pos='absolute'

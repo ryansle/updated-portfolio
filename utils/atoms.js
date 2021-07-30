@@ -1,16 +1,16 @@
-import { atom, selector } from "recoil";
+import { atom } from 'recoil';
 
 const initialFields = {
-  email: "",
-  name: "",
-  phoneNumber: "",
-  favoriteColor: "",
-  whyFavorite: "",
-  pin: "",
+  email: '',
+  name: '',
+  phoneNumber: '',
+  favoriteColor: '',
+  whyFavorite: '',
+  pin: '',
 };
 
 const fields = atom({
-  key: "fields",
+  key: 'fields',
   default: initialFields,
 });
 

@@ -1,9 +1,11 @@
 // Components
-import { Box, Heading, Center, Text} from '@chakra-ui/react';
+import {
+  Box, Heading, Center, Text,
+} from '@chakra-ui/react';
 
 // Utilities
-import { fields as fieldsState } from '../../../../utils/atoms';
 import { useRecoilValue } from 'recoil';
+import { fields as fieldsState } from '../../../../utils/atoms';
 
 const Review = () => {
   const fields = useRecoilValue(fieldsState);
@@ -30,7 +32,7 @@ const Review = () => {
         </Box>
       </Center>
     </Box>
-  )
+  );
 };
 
 export default Review;
