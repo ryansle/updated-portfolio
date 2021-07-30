@@ -35,7 +35,12 @@ const Home = () => {
         transition={{ enter: { duration: 0.4, delay: 0.7 } }}
       >
         <Box position='relative'>
-          <Image src='./banner.png' borderRadius={20} mb={10} boxShadow='lg' />
+          <Image 
+            src='https://i.imgur.com/kejBrRf.png' 
+            borderRadius={20} 
+            mb={10} 
+            boxShadow='lg' 
+          />
           <Heading size='2xl'>Ryan Le</Heading>
           <Heading size='lg' mt='10px'>Software Engineer. Front-End Web Developer.</Heading>
         </Box>

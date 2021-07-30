@@ -45,7 +45,7 @@ const PageLinks = () => (
           borderRadius='full'
           boxSize='200px'
           boxShadow='md'
-          src='/headshot.png'
+          src='https://i.imgur.com/G2OKPI4.png'
           alt='Ryan Le'
           mb='5px'
         />

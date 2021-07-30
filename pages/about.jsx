@@ -57,7 +57,7 @@ const About = () => {
         </Box>
         <Box width={['100%', null, '40%']} align='center'>
           <Image 
-            src='./about/idaho.JPG' 
+            src='https://i.imgur.com/TAchISX.jpg' 
             width={500} 
             borderRadius={10} 
             boxShadow='md' 
