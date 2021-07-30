@@ -1,7 +1,14 @@
 import React from 'react';
 
 // Components
-import { Heading, Box, Image, Text, Wrap } from '@chakra-ui/react';
+import { 
+  Heading, 
+  Box, 
+  Image, 
+  Text, 
+  Wrap,
+  SlideFade
+} from '@chakra-ui/react';
 import AppNavigation from '../components/Navigation/AppNavigation';
 import NavCard from '../components/Home/NavCard';
 import Head from 'next/head';
@@ -22,9 +29,17 @@ const Home = () => {
         <meta property='og:image' content='./preview.jpeg' />
       </Head>
 
-      <Image src='./banner.png' borderRadius={20} mb={10} boxShadow='lg' />
-      <Heading size='2xl'>Ryan Le</Heading>
-      <Heading size='lg' mt='10px'>Software Engineer. Front-End Web Developer.</Heading>
+      <SlideFade
+        direction="top"
+        in={true}
+        transition={{ enter: { duration: 0.4, delay: 0.7 } }}
+      >
+        <Box position='relative'>
+          <Image src='./banner.png' borderRadius={20} mb={10} boxShadow='lg' />
+          <Heading size='2xl'>Ryan Le</Heading>
+          <Heading size='lg' mt='10px'>Software Engineer. Front-End Web Developer.</Heading>
+        </Box>
+      </SlideFade>
       <Box mt={10}>
         <Text fontSize='xl'>
           I rebuilt this online portfolio using the Chakra UI component library and React.js after spending
