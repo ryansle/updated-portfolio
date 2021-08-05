@@ -29,6 +29,8 @@ const Credit = ({ person }) => (
                 <Anchor href={`https://${person.portfolio}`}>
                   <Chain />
                   :
+                  {' '}
+                  {' '}
                   {person.portfolio}
                 </Anchor>
               </Text>

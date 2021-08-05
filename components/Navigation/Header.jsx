@@ -48,9 +48,7 @@ const Header = (props) => {
 
           <Flex align='center' color='gray.500'>
             <IconButton
-              aria-label={`Switch to ${
-                colorMode === 'light' ? 'dark' : 'light'
-              } mode`}
+              aria-label={`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`}
               variant='ghost'
               color='current'
               ml='2'

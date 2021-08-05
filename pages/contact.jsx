@@ -21,7 +21,6 @@ const Contact = () => (
     <Heading size='2xl' mb={5}>Let's Talk!</Heading>
     <Flex
       justify='space-between'
-      mb={20}
       wrap='wrap-reverse'
       align='center'
     >
@@ -39,13 +38,19 @@ const Contact = () => (
           build phases of your current project or just need a hand getting
           started.
         </Text>
+
+        <Heading
+          size='lg'
+          mb={5}
+          mt={10}
+        >
+          Connect with me on Social Media
+        </Heading>
+        <HStack spacing={6}>
+          {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
+        </HStack>
       </Box>
     </Flex>
-
-    <Heading size='lg' mb={5}>Connect with me on Social Media</Heading>
-    <HStack spacing={6} mb={[30, null, null, 20]}>
-      {socials.map((account) => <SocialMedia key={uuid()} channel={account} />)}
-    </HStack>
   </AppNavigation>
 );
 
