@@ -6,6 +6,7 @@ import {
   HStack,
   Link,
   useColorMode,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import SocialMedia from '../SocialMedia';
 
@@ -16,6 +17,7 @@ import { socials } from '../../content/social-media';
 import { v4 as uuid } from 'uuid'; // eslint-disable-line
 
 const Footer = () => {
+  const [isSmallScreen] = useMediaQuery('(max-width: 1100px)');
   const { colorMode } = useColorMode();
   const bg = { light: 'white', dark: 'gray.800' };
 
@@ -25,8 +27,8 @@ const Footer = () => {
       borderTopWidth='1px'
       bg={bg[colorMode]}
       py='2rem'
-      px={['2rem', null, null, '11rem']}
-      mx='-2rem'
+      px={['10%', '14%']}
+      mx={[0, null, '-2rem']}
     >
       <Flex align='center' justify='space-between' wrap='wrap'>
         <Box>
@@ -41,8 +43,8 @@ const Footer = () => {
             Ryan Le. All Rights Reserved.
           </Text>
         </Box>
-        <Box align='flex-end'>
-          <Text fontSize='md'>
+        <Box>
+          <Text fontSize='md' mb={1}>
             Portfolio created with
             {' '}
             <Link href='https://nextjs.org/' color='teal.500'>Next.js</Link>
@@ -53,7 +55,7 @@ const Footer = () => {
             {' '}
             components.
           </Text>
-          <Text fontSize='md' mb={3} float='right'>
+          <Text fontSize='md' mb={3}>
             Hosted on
             {' '}
             <Link href='https://vercel.com/dashboard' color='teal.500'>Vercel</Link>

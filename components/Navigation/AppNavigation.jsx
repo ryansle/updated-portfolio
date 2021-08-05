@@ -1,11 +1,16 @@
 // Components
-import { Box, useColorMode } from '@chakra-ui/react';
+import {
+  Box,
+  useColorMode,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Footer from './Footer';
 
 const AppNavigation = ({ children, ...rest }) => {
   const { colorMode } = useColorMode();
+  const [isSmallScreen] = useMediaQuery('(max-width: 767px)');
 
   return (
     <Box>
@@ -25,9 +30,10 @@ const AppNavigation = ({ children, ...rest }) => {
               {children}
             </Box>
           </Box>
-          <Footer />
+          {!isSmallScreen && <Footer />}
         </Box>
       </Box>
+      {isSmallScreen && <Footer />}
     </Box>
   );
 };
