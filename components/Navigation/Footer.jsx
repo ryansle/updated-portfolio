@@ -6,7 +6,6 @@ import {
   HStack,
   Link,
   useColorMode,
-  useMediaQuery,
 } from '@chakra-ui/react';
 import SocialMedia from '../SocialMedia';
 
@@ -17,7 +16,6 @@ import { socials } from '../../content/social-media';
 import { v4 as uuid } from 'uuid'; // eslint-disable-line
 
 const Footer = () => {
-  const [isSmallScreen] = useMediaQuery('(max-width: 1100px)');
   const { colorMode } = useColorMode();
   const bg = { light: 'white', dark: 'gray.800' };
 

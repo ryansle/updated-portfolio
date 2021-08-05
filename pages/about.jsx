@@ -98,6 +98,7 @@ const About = () => (
           Bachelor of Science in
           <b>Software Engineering</b>
           ; Minor in
+          {' '}
           <b>Mathematics</b>
         </Text>
         <Text fontSize='xl'>
