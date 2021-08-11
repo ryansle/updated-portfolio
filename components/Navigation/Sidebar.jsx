@@ -50,7 +50,9 @@ const PageLinks = () => (
           mb='5px'
         />
         <Heading size='sm'>Ryan Le</Heading>
-        <Text size='sm' align='center'>Product &amp; Technology Software Intern @ T-Mobile</Text>
+        <Text size='sm' align='center'>
+          Software Engineer III @ American Express
+        </Text>
       </VStack>
     </Center>
 

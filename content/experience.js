@@ -1,12 +1,26 @@
 export const experienceContent = [
   {
-    company: 'T-Mobile',
-    role: 'Product & Technology Software Intern',
-    dateRange: 'May 2021 - Now',
-    description: 'Working with legacy Sprint teams to streamline development processes, create user stories, and take ownership of a product that aims to merge T-Mobile and Sprint customer operations.',
+    company: 'American Express',
+    role: 'Software Engineer III',
+    dateRange: 'August 2021 - Now',
+    description: 'Working with the Demand Generation & Shopping Experiences team as a front-end web developer using React.js, Node.js, and more.',
     subtitle: 'Primary Responsibilities',
     bullets: [
       'To be determined...',
+    ],
+    imagePath: './experience/amex.png',
+  },
+  {
+    company: 'T-Mobile',
+    role: 'Product & Technology Intern',
+    dateRange: 'May 2021 - August 2021',
+    description: 'Worked with the Digital Team at T-Mobile to streamline internal processes in a fully remote internship.',
+    subtitle: 'Internship Experience',
+    bullets: [
+      'Provided direction and guidance for process improvement and account for governance policies that represent the department to various customers and stakeholders.',
+      'Consulted with cross-functional teams to detail insights that drive strategic initiatives and projects that outline corporate prioritization with actionable plans.',
+      'Documented business operations requirements, utilizing best practices and communicating updates and tracking progress of efforts.',
+      'Ensured business continuity efforts are maintained and evolve as capabilities improve and become more robust.',
     ],
     imagePath: './experience/tmobile.svg',
   },
