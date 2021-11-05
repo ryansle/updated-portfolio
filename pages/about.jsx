@@ -35,19 +35,19 @@ const About = () => (
     >
       <Box width={['100%', null, '50%']}>
         <Text fontSize='xl' mb={5}>
-          Hey there, my name is Ryan Le and I am a new graduate of the University of
+          Hey there, my name is Ryan Le and I am a recent graduate of the University of
           Nebraska-Lincoln with a Bachelor of Science degree in Software Engineering.
         </Text>
         <Text fontSize='xl' mb={5}>
           I am an Vietnamese-American front-end developer originally from Sioux Falls,
-          South Dakota but I'll soon be moving out to New York City. I work primarily with
-          JavaScript-based technologies like React.js, Material-UI, and Chakra UI.
+          South Dakota. I'm currently based out of New York City. I work primarily with
+          JavaScript-based technologies like React.js, Node.js, and Chakra UI, among other things.
         </Text>
         <Text fontSize='xl' mb={10}>
           As such, I specialize in web development and enjoy working on projects of all
           shapes and sizes, ranging from deep within the initial design process to building
           out large-scale systems. In time, I am hoping to gain more full-stack experience,
-          leveraging tools like Amazon Web Services and Firebase.
+          leveraging tools like Amazon Web Services, Firebase, and Supabase.
         </Text>
 
         <Heading size='lg' mb={5}>Connect with me on Social Media</Heading>
@@ -96,6 +96,7 @@ const About = () => (
         <Heading size='lg' mb={2}>University of Nebraska-Lincoln</Heading>
         <Text fontSize='xl'>
           Bachelor of Science in
+          {' '}
           <b>Software Engineering</b>
           ; Minor in
           {' '}

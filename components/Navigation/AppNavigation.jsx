@@ -15,7 +15,10 @@ const AppNavigation = ({ children, ...rest }) => {
   return (
     <Box>
       <Header />
-      <Box px={[4, null, 8]} backgroundColor={colorMode === 'light' ? 'gray.100' : 'gray.900'}>
+      <Box
+        px={[4, null, 8]}
+        backgroundColor={colorMode === 'light' ? 'gray.100' : 'gray.900'}
+      >
         <Sidebar
           display={['none', null, 'block']}
           maxWidth='18rem'
